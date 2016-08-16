@@ -6,18 +6,16 @@
   </head>
   <body>
     <header>
-      <div class="">
-        <img src="" alt="symbol-search">
+      <div class="header-top">
+        <a href="index.html"> Техномарт </a>
         <form>
             <input type="search" name="search" value="Поиск">
         </form>
         <ul>
           <li>
-            <img src="" alt="symbol-bookmark">
             <a href="#"> Закладки: 0 </a>
           </li>
           <li>
-            <img src="" alt="symbol-track">
             <a href="#"> Корзина: 0 </a>
           </li>
           <li>
@@ -25,18 +23,20 @@
           </li>
         </ul>
       </div>
-      <div class="header-description">
-        <p>
-          Интернет-магазин строительных материалов и инструментов для ремонта
-        </p>
-      </div>
-      <div class="header-contacts">
-        <span class="contacts-number"> +7 (812) 555-05-55 </span>
-        <span class="contacts-address"> г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 </span>
-      </div>
-      <div class="header-sign-up">
-        <a href="#"> Войти </a>
-        <a href="#"> Регистрация </a>
+      <div class="container clearfix">
+        <div class="header-description">
+          <p>
+            Интернет-магазин строительных материалов и инструментов для ремонта
+          </p>
+        </div>
+        <div class="header-contacts">
+          <span class="contacts-number"> +7 (812) 555-05-55 </span>
+          <span class="contacts-address"> г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 </span>
+        </div>
+        <div class="header-sign-up">
+          <a href="#"> Войти </a>
+          <a href="#"> Регистрация </a>
+        </div>
       </div>
       <div class="header-navigation">
         <ul>
@@ -65,39 +65,31 @@
       </div>
     </header>
     <main>
-      <!--
-      Каким образом сделать метку "NEW"?
-      -->
       <div class="main-promo-block">
-        <div class="main-promo-card">
+        <div class="main-promo-card promo-card-bckgrnd">
           <span> Материалы </span>
           <a class="promo-card-btn" href="#"> На любой вкус </a>
-          <img src="img/bucket.png" alt="bucket">
         </div>
-        <div class="main-promo-card">
+        <div class="main-promo-card promo-card-bckgrnd">
           <span> Инструмент </span>
           <a class="promo-card-btn" href="#"> На все случаи </a>
-          <img src="img/screwdriver.png" alt="screwdriver">
         </div>
-        <div class="main-promo-card">
+        <div class="main-promo-card promo-card-bckgrnd">
           <span> Техника </span>
           <a class="promo-card-btn" href="#"> Для стройки </a>
-          <img  src="img/tractor.png" alt="tractor">
         </div>
         <div class="main-promo-slaider">
           <span>Перфораторы</span>
           <span>Настоящие мужские игрушки</span>
           <a class="slaider-btn" href="#"> Открыть каталог </a>
         </div>
-        <div class="main-promo-card">
+        <div class="main-promo-card promo-card-bckgrnd">
           <span> Скидки 50% </span>
           <a class="promo-card-btn" href="#"> На 350 товаров </a>
-          <img src="img/track.png" alt="track">
         </div>
-        <div class="main-promo-card">
+        <div class="main-promo-card promo-card-bckgrnd">
           <span> Доставка </span>
           <a class="promo-card-btn" href="#"> Бесплатно </a>
-          <img src="img/bus.png" alt="bus">
         </div>
       </div>
       <div class="main-heading">
@@ -140,43 +132,64 @@
       <div class="main-producers">
         <ul>
           <li>
-            <a href="#"> bosch </a>
+            <a href="#">
+              <img src="" alt="bosch">
+            </a>
           </li>
           <li>
-            <a href="#"> makita </a>
+            <a href="#">
+              <img src="" alt="makita">
+            </a>
           </li>
           <li>
-            <a href="#"> DeWalt </a>
+            <a href="#">
+              <img src="" alt="DeWalt">
+            </a>
           </li>
           <li>
-            <a href="#"> интерскол </a>
+            <a href="#">
+              <img src="" alt="интерскол">
+            </a>
           </li>
           <li>
-            <a href="#"> hitachi </a>
+            <a href="#">
+              <img src="" alt="hitachi">
+            </a>
           </li>
           <li>
-            <a href="#"> LG </a>
+            <a href="#">
+              <img src="" alt="LG">
+            </a>
           </li>
           <li>
-            <a href="#"> AEG </a>
+            <a href="#">
+              <img src="" alt="AEG">
+            </a>
           </li>
           <li>
-            <a href="#"> metabo </a>
+            <a href="#">
+              <img src="" alt="metabo">
+            </a>
           </li>
         </ul>
       </div>
       <div class="main-services">
-        <h1> Сервисы </h1>
+        <h2> Сервисы </h2>
         <p>
           Хороший интернет-магазин отличается от плохого не только ценами!
-          <br>
           Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
         </p>
-        <div class="main-services-btn">
-          <button type="button" name="delivery"> Доставка </button>
-          <button type="button" name="guarantee"> Гарантия </button>
-          <button type="button" name="credit"> Кредит </button>
-        </div>
+        <ul class="main-services-type">
+          <li>
+            <a href="#"> Доставка </a>
+          </li>
+          <li>
+            <a href="#"> Гарантия </a>
+          </li>
+          <li>
+            <a href="#"> Кредит </a>
+          </li>
+        </ul>
         <div class="main-services-description">
           <span class="main-services-description-heading"> Доставка </span>
           <p>
