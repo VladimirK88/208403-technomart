@@ -84,179 +84,181 @@
         </li>
       </ul>
       <h2> Перфораторы </h2>
-      <form class="Catalog-filter" action="index.html" method="post">
-        <div class="filter-header">
-          <span> Фильтр: </span>
-        </div>
-        <div class="filter-price">
-          <h4> Цена: </h4>
-          <input type="range" min="0" max="30000" step="1" value="">
-          <input type="text" name="name" value="0">
-          <span> - </span>
-          <input type="text" name="name" value="30000">
-        </div>
-        <div class="filter-producers">
-          <h4> Производители: </h4>
-            <input type="checkbox" name="name" value="" id="bosch" checked>
-            <label for="bosch"> bosch </label>
-            <input type="checkbox" name="name" value="" id="интерскол">
-            <label for="интерскол"> интерскол </label>
-            <input type="checkbox" name="name" value="" id="makita" checked>
-            <label for="makita"> makita </label>
-            <input type="checkbox" name="name" value="" id="DeWalt">
-            <label for="DeWalt"> DeWalt </label>
-            <input type="checkbox" name="name" value="" id="hitachi">
-            <label for="hitachi"> hitachi </label>
-        </div>
-        <div class="filter-feeding">
-          <h4> Питание: </h4>
+      <div class="catalog-content">
+        <form class="Catalog-filter" action="index.html" method="post">
+          <div class="filter-header">
+            <span> Фильтр: </span>
+          </div>
+          <div class="filter-price">
+            <h4> Цена: </h4>
+            <input type="range" min="0" max="30000" step="1" value="">
+            <input type="text" name="name" value="0">
+            <span> - </span>
+            <input type="text" name="name" value="30000">
+          </div>
+          <div class="filter-producers">
+            <h4> Производители: </h4>
+              <input type="checkbox" name="name" value="" id="bosch" checked>
+              <label for="bosch"> bosch </label>
+              <input type="checkbox" name="name" value="" id="интерскол">
+              <label for="интерскол"> интерскол </label>
+              <input type="checkbox" name="name" value="" id="makita" checked>
+              <label for="makita"> makita </label>
+              <input type="checkbox" name="name" value="" id="DeWalt">
+              <label for="DeWalt"> DeWalt </label>
+              <input type="checkbox" name="name" value="" id="hitachi">
+              <label for="hitachi"> hitachi </label>
+          </div>
+          <div class="filter-feeding">
+            <h4> Питание: </h4>
+            <ul>
+              <li>
+                <input type="radio" name="feed" value="Аккумуляторные" id="feed1" checked="">
+                <label for="feed1"> Аккумуляторные </label>
+              </li>
+              <li>
+                <input type="radio" name="feed" value="Сетевые" id="feed2">
+                <label for="feed2"> Сетевые </label>
+              </li>
+            </ul>
+          </div>
+          <input type="submit" name="show-products" value="Показать">
+        </form>
+        <div class="Catalog-sort">
+          <span> Сортировка: </span>
           <ul>
             <li>
-              <input type="radio" name="feed" value="Аккумуляторные" id="feed1" checked="">
-              <label for="feed1"> Аккумуляторные </label>
+              <a href="#"> По цене </a>
             </li>
             <li>
-              <input type="radio" name="feed" value="Сетевые" id="feed2">
-              <label for="feed2"> Сетевые </label>
+              <a href="#"> По типу </a>
+            </li>
+            <li>
+              <a href="#"> По функционалу </a>
+            </li>
+            <li>
+              <a class="Catalog-sort-btn-up" href="#"> <= </a>
+            </li>
+            <li>
+              <a class="Catalog-sort-btn-down" href="#"> => </a>
             </li>
           </ul>
         </div>
-        <input type="submit" name="show-products" value="Показать">
-      </form>
-      <div class="Catalog-sort">
-        <span> Сортировка: </span>
-        <ul>
-          <li>
-            <a href="#"> По цене </a>
-          </li>
-          <li>
-            <a href="#"> По типу </a>
-          </li>
-          <li>
-            <a href="#"> По функционалу </a>
-          </li>
-          <li>
-            <a class="Catalog-sort-btn-up" href="#"> <= </a>
-          </li>
-          <li>
-            <a class="Catalog-sort-btn-down" href="#"> => </a>
-          </li>
-        </ul>
-      </div>
-      <div class="Catalog-products">
-        <article class="product-card product-card-bckgrnd">
-          <div class="product-card-img">
-            <img src="img/BFG_3000.jpg" alt="BFG_3000">
-          </div>
-          <div class="product-card-description">
-            <span> Перфоратор BOSCH </span>
-            <span> BFG 3000 </span>
-            <span class="old-price"> 22500 Р. </span>
-            <a href="#"> 15500 Р. </a>
-          </div>
-        </article>
-        <article class="product-card product-card-bckgrnd">
-          <div class="product-card-img">
-           <img src="img/BFG_6000.jpg" alt="BFG_6000">
-          </div>
-          <div class="product-card-description ">
-            <span> Перфоратор BOSCH </span>
-            <span> BFG 6000 </span>
-            <span class="old-price"> 30500 Р. </span>
-            <a href="#"> 25500 Р. </a>
-          </div>
-        </article>
-        <article class="product-card product-card-bckgrnd">
-          <div class="product-card-img">
-            <a class="buy" href="#"> Купить </a>
-            <a class="to-favorite" href="#"> В закладки </a>
-          </div>
-          <div class="product-card-description">
-            <span> Перфоратор BOSCH </span>
-            <span> 12500 Р. </span>
-            <a href="#"> 15500 Р. </a>
-          </div>
-        </article>
-        <article class="product-card product-card-bckgrnd">
-          <div class="product-card-img">
-            <img src="img/BFG_3000.jpg" alt="BFG_3000">
-          </div>
-          <div class="product-card-description">
-            <span> Перфоратор BOSCH </span>
-            <span> BFG 3000 </span>
-            <span class="old-price"> 22500 Р. </span>
-            <a href="#"> 15500 Р. </a>
-          </div>
-        </article>
-        <article class="product-card product-card-bckgrnd">
-          <div class="product-card-img">
-            <img src="img/BFG_6000.jpg" alt="BFG_6000">
-          </div>
-          <div class="product-card-description">
-            <span> Перфоратор BOSCH </span>
-            <span> BFG 6000 </span>
-            <span class="old-price"> 30500 Р. </span>
-            <a href="#"> 25500 Р. </a>
-          </div>
-        </article>
-        <article class="product-card product-card-bckgrnd">
-          <div class="product-card-img">
-            <img src="img/BFG_2000.jpg" alt="BFG_2000">
-          </div>
-          <div class="product-card-description">
-            <span> Перфоратор BOSCH </span>
-            <span> 12500 Р. </span>
-            <a href="#"> 15500 Р. </a>
-          </div>
-        </article>
-        <article class="product-card product-card-bckgrnd">
-          <div class="product-card-img">
-            <img src="img/BFG_3000.jpg" alt="BFG_3000">
-          </div>
-          <div class="product-card-description">
-            <span> Перфоратор BOSCH </span>
-            <span> BFG 3000 </span>
-            <span class="old-price"> 22500 Р. </span>
-            <a href="#"> 15500 Р. </a>
-          </div>
-        </article>
-        <article class="product-card product-card-bckgrnd">
-          <div class="product-card-img">
-            <img src="img/BFG_6000.jpg" alt="BFG_6000">
-          </div>
-          <div class="product-card-description">
-            <span> Перфоратор BOSCH </span>
-            <span> BFG 6000 </span>
-            <span class="old-price"> 30500 Р. </span>
-            <a href="#"> 25500 Р. </a>
-          </div>
-        </article>
-        <article class="product-card product-card-bckgrnd">
-          <div class="product-card-img">
-            <img src="img/BFG_2000.jpg" alt="BFG_2000">
-          </div>
-          <div class="product-card-description">
-            <span> Перфоратор BOSCH </span>
-            <span> 12500 Р. </span>
-            <a href="#"> 15500 Р. </a>
-          </div>
-        </article>
-      </div>
-      <div class="catalog-pages">
-        <ul>
-          <li>
-            <a class="" href="#"> 1 </a>
-          </li>
-          <li>
-            <a class="" href="#"> 2 </a>
-          </li>
-          <li>
-            <a class="" href="#"> 3 </a>
-          </li>
-          <li>
-            <a class="" href="#"> Следующая </a>
-          </li>
-        </ul>
+        <div class="Catalog-products">
+          <article class="product-card product-card-bckgrnd">
+            <div class="product-card-img">
+              <img src="img/BFG_3000.jpg" alt="BFG_3000">
+            </div>
+            <div class="product-card-description">
+              <span> Перфоратор BOSCH </span>
+              <span> BFG 3000 </span>
+              <span class="old-price"> 22500 Р. </span>
+              <a href="#"> 15500 Р. </a>
+            </div>
+          </article>
+          <article class="product-card product-card-bckgrnd">
+            <div class="product-card-img">
+             <img src="img/BFG_6000.jpg" alt="BFG_6000">
+            </div>
+            <div class="product-card-description ">
+              <span> Перфоратор BOSCH </span>
+              <span> BFG 6000 </span>
+              <span class="old-price"> 30500 Р. </span>
+              <a href="#"> 25500 Р. </a>
+            </div>
+          </article>
+          <article class="product-card product-card-bckgrnd">
+            <div class="product-card-img">
+              <a class="buy" href="#"> Купить </a>
+              <a class="to-favorite" href="#"> В закладки </a>
+            </div>
+            <div class="product-card-description">
+              <span> Перфоратор BOSCH </span>
+              <span> 12500 Р. </span>
+              <a href="#"> 15500 Р. </a>
+            </div>
+          </article>
+          <article class="product-card product-card-bckgrnd">
+            <div class="product-card-img">
+              <img src="img/BFG_3000.jpg" alt="BFG_3000">
+            </div>
+            <div class="product-card-description">
+              <span> Перфоратор BOSCH </span>
+              <span> BFG 3000 </span>
+              <span class="old-price"> 22500 Р. </span>
+              <a href="#"> 15500 Р. </a>
+            </div>
+          </article>
+          <article class="product-card product-card-bckgrnd">
+            <div class="product-card-img">
+              <img src="img/BFG_6000.jpg" alt="BFG_6000">
+            </div>
+            <div class="product-card-description">
+              <span> Перфоратор BOSCH </span>
+              <span> BFG 6000 </span>
+              <span class="old-price"> 30500 Р. </span>
+              <a href="#"> 25500 Р. </a>
+            </div>
+          </article>
+          <article class="product-card product-card-bckgrnd">
+            <div class="product-card-img">
+              <img src="img/BFG_2000.jpg" alt="BFG_2000">
+            </div>
+            <div class="product-card-description">
+              <span> Перфоратор BOSCH </span>
+              <span> 12500 Р. </span>
+              <a href="#"> 15500 Р. </a>
+            </div>
+          </article>
+          <article class="product-card product-card-bckgrnd">
+            <div class="product-card-img">
+              <img src="img/BFG_3000.jpg" alt="BFG_3000">
+            </div>
+            <div class="product-card-description">
+              <span> Перфоратор BOSCH </span>
+              <span> BFG 3000 </span>
+              <span class="old-price"> 22500 Р. </span>
+              <a href="#"> 15500 Р. </a>
+            </div>
+          </article>
+          <article class="product-card product-card-bckgrnd">
+            <div class="product-card-img">
+              <img src="img/BFG_6000.jpg" alt="BFG_6000">
+            </div>
+            <div class="product-card-description">
+              <span> Перфоратор BOSCH </span>
+              <span> BFG 6000 </span>
+              <span class="old-price"> 30500 Р. </span>
+              <a href="#"> 25500 Р. </a>
+            </div>
+          </article>
+          <article class="product-card product-card-bckgrnd">
+            <div class="product-card-img">
+              <img src="img/BFG_2000.jpg" alt="BFG_2000">
+            </div>
+            <div class="product-card-description">
+              <span> Перфоратор BOSCH </span>
+              <span> 12500 Р. </span>
+              <a href="#"> 15500 Р. </a>
+            </div>
+          </article>
+        </div>
+        <div class="catalog-pages">
+          <ul>
+            <li>
+              <a class="" href="#"> 1 </a>
+            </li>
+            <li>
+              <a class="" href="#"> 2 </a>
+            </li>
+            <li>
+              <a class="" href="#"> 3 </a>
+            </li>
+            <li>
+              <a class="" href="#"> Следующая </a>
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="about-drill">
         <span> Пара слов оперфораторах </span>
