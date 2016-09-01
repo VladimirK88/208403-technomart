@@ -48,6 +48,29 @@ h4 {
 
 }
 
+.header-list-left {
+  float: left;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header-list-right {
+  float: right;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header-list-left li {
+  display: inline-block;
+  vertical-align: text-top;
+}
+
+.header-list-right li {
+  display: inline;
+}
+
 .header-description {
   float: left;
   width: 320px;
@@ -73,10 +96,25 @@ h4 {
   margin-top: 46px;
 }
 
+.header-signed-up li {
+  display: inline;;
+  list-style: none;
+}
+
 .header-navigation {
   float: left;
   width: 940px;
   margin-bottom: 60px;
+}
+
+.header-navigation-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header-navigation-menu li {
+  display: inline;
 }
 
 .main-promo-block {
@@ -111,9 +149,6 @@ h4 {
   margin-right: 20px;
 }
 
-.slaider-btn {
-
-}
 
 .main-heading {
   margin-bottom: 20px;
@@ -150,6 +185,17 @@ h4 {
   margin-bottom: 87px;
 }
 
+.main-producers li{
+  list-style: none;
+  display: inline-block;;
+}
+
+.main-producers a {
+  display: block;
+  width: 220px;
+  height: 145px;
+}
+
 .main-services {
   margin-bottom: 80px;
   padding-top: 62px;
@@ -161,16 +207,21 @@ h4 {
 }
 
 .main-services-type {
-  width: 240px;
+  width: 620px;
+  height: 183px;
   float: left;
   margin-top: 70px;
   margin-right: 80px;
 }
 
-.main-services-description {
-  width: 300px;
+.main-services-type ul {
   float: left;
-  margin-top: 70px;
+  height: 183px;
+  margin-right: 80px;
+}
+
+.main-services-type li {
+  list-style: none;
 }
 
 .main-services-description p {
@@ -212,6 +263,14 @@ h4 {
   float: right;
 }
 
+.footer-navigation-menu-top li {
+  display: inline;
+}
+
+.footer-navigation-menu-bottom li {
+  display: inline;
+}
+
 .footer-footer {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -226,6 +285,12 @@ h4 {
 .footer-social {
   width: 150px;
   float: left;
+}
+
+.footer-social li {
+  display: inline;
+  list-style: none;
+  width: 40px;
 }
 
 .footer-mail {
@@ -266,17 +331,9 @@ h4 {
 }
 
 .Catalog-sort {
-  height: 140px; /*временная высота*/
+  max-height: 38px;
   margin-bottom: 20px;
   background-color: #cccccc;
-}
-
-.Catalog-sort span {
-  float: left;
-}
-
-.Catalog-sort ul {
-  float: left;
 }
 
 .Catalog-sort-btn-up {
@@ -310,6 +367,29 @@ h4 {
 .about-drill {
   padding-top: 64px;
   padding-bottom: 70px;
+}
+
+.catalog-navigation li {
+  display: inline;
+  list-style: none;
+}
+
+.Catalog-sort span {
+  float: left;
+}
+
+.Catalog-sort ul {
+  float: right;
+}
+
+.Catalog-sort li {
+  display: inline;
+  list-style: none;
+}
+
+.catalog-pages li {
+  list-style: none;
+  display: inline;
 }
 /*======================================
  Системное оформление - не изменять
