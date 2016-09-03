@@ -97,7 +97,7 @@ h4 {
 }
 
 .header-signed-up li {
-  display: inline;;
+  display: inline;
   list-style: none;
 }
 
@@ -114,7 +114,7 @@ h4 {
 }
 
 .header-navigation-menu li {
-  display: inline;
+  display: inline-block;
 }
 
 .main-promo-block {
@@ -186,7 +186,7 @@ h4 {
 
 .main-producers li{
   list-style: none;
-  display: inline-block;;
+  display: inline-block;
 }
 
 .main-producers a {
@@ -263,11 +263,11 @@ h4 {
 }
 
 .footer-navigation-menu-top li {
-  display: inline;
+  display: inline-block;
 }
 
 .footer-navigation-menu-bottom li {
-  display: inline;
+  display: inline-block;
 }
 
 .footer-footer {
@@ -287,7 +287,7 @@ h4 {
 }
 
 .footer-social li {
-  display: inline;
+  display: inline-block;
   list-style: none;
   width: 40px;
 }
@@ -388,7 +388,7 @@ h4 {
 
 .catalog-pages li {
   list-style: none;
-  display: inline;
+  display: inline-block;
 }
 /*======================================
  Системное оформление - не изменять
