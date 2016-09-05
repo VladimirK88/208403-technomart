@@ -286,7 +286,7 @@ header {
 /*= main-begin ==========================================================================*/
 .main-promo-block {
   margin-top: 59px;
-  margin-bottom: 51px;
+  margin-bottom: 0px;
 }
 
 .main-promo-card {
@@ -370,9 +370,45 @@ header {
 
 .main-promo-slider a {
   display: block;
+  position: relative;
+  left: 25px;
+  bottom: 122px;
   width: 198px;
   height: 38px;
   background-color: #ee3643;
+  text-decoration: none;
+  font-family: "Cuprum";
+  font-size: 14px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 2px;
+}
+
+.main-promo-slider a:hover {
+  background-color: #ca2c37;
+}
+
+.main-promo-slider a:active {
+  background-color: #ba2732;
+}
+
+.main-promo-slider span {
+  font-family: "Cuprum";
+  font-size: 18px;
+  color: #ffffff;
+  position: relative;
+  left: 25px;
+  bottom: 250px;
+}
+
+.main-promo-slider .slider-title {
+  font-family: "Cuprum Bold";
+  font-size: 30px;
+  text-transform: uppercase;
+  left: 25px;
+  bottom: 250px;
+  padding-right: 370px;
 }
 
 .main-heading {
@@ -382,14 +418,33 @@ header {
 
 .main-heading h2 {
   margin-left: 24px;
-  float: left;;
+  float: left;
 }
 
 .main-heading a {
+  display: block;
   margin-right: 24px;
-  margin-top: 25px;
-  margin-bottom: 25px;
+  margin-top: 20px;
   float: right;
+  display: block;
+  width: 198px;
+  height: 38px;
+  background-color: #ee3643;
+  text-decoration: none;
+  font-family: "Cuprum";
+  font-size: 14px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 2px;
+}
+
+.main-heading a:hover {
+  background-color: #ca2c37;
+}
+
+.main-heading a:active {
+  background-color: #ba2732;
 }
 
 .main-product-card {
@@ -397,6 +452,40 @@ header {
   width: 220px;
   height: 318px;
   margin-right: 20px;
+  box-shadow: 0 0 0 1px #e5e5e5;
+}
+
+.main-product-card span {
+  font-family: "PT Sans Bold";
+  font-size: 18px;
+  text-align: center;
+}
+
+.old-price {
+  font-size: 17px;
+  color: #999999;
+  text-decoration: line-through;
+  text-align: center;
+}
+
+.main-product-card a {
+  display: block;
+  width: 123px;
+  height: 38px;
+  background-color: #ee3643;
+  margin: 0px auto;
+  text-decoration: none;
+  text-align: center;
+  color: #ffffff;
+  line-height: 38px;
+}
+
+.main-product-card a:hover {
+  background-color: #ca2c37;
+}
+
+.main-product-card a:active {
+  background-color: #ba2732;
 }
 
 .main-products {
@@ -411,15 +500,23 @@ header {
   margin-bottom: 87px;
 }
 
+.main-producers ul {
+  margin: 0px;
+  padding: 0px;
+}
+
 .main-producers li{
-  list-style: none;
   display: inline-block;
+  vertical-align: top;
 }
 
 .main-producers a {
   display: block;
   width: 220px;
   height: 145px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 0 1px #e5e5e5;
 }
 
 .main-services {
@@ -431,6 +528,7 @@ header {
 
 .main-services p {
   width: 400px;
+
 }
 
 .main-services-type {
@@ -451,6 +549,29 @@ header {
   list-style: none;
 }
 
+.main-services-menu a {
+  display: block;
+  width: 240px;
+  height: 60px;
+  background-color: #32425c;
+  text-decoration: none;
+  font-family: "Cuprum Bold";
+  font-size: 21px;
+  color: #ffffff;
+  line-height: 60px;
+  text-align: center;
+  border-top: 1px solid #405069;
+  border-bottom: 1px solid #293449;
+}
+
+.main-services-menu a:hover {
+  background-color: #293449;
+}
+
+.services-description {
+  display: none;
+}
+
 .main-services-description p {
   width: auto;
 }
@@ -462,6 +583,16 @@ header {
 .main-company-description {
   width: 540px;
   float: left;
+}
+
+.main-company-description li{
+  list-style: none;
+  font-family: "Cuprum Bold";
+  font-size: 18px;
+}
+
+.main-company-description li {
+  content: attr("-");
 }
 
 .main-company-contacts {

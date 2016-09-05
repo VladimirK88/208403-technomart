@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
@@ -86,9 +87,9 @@
         </div>
         <div class="main-promo-slider">
           <img src="img/slider_drill.jpg" alt="slider_drill"/>
-          <span>Перфораторы</span>
+          <span class="slider-title">Перфораторы</span>
           <span>Настоящие мужские игрушки</span>
-          <a class="slaider-btn" href="#"> Открыть каталог </a>
+          <a class="slider-btn" href="#"> Открыть каталог </a>
         </div>
         <div class="main-promo-card promo-card-bckgrnd discount">
           <span> Скидки 50% </span>
@@ -180,31 +181,57 @@
           </li>
         </ul>
       </div>
-      <div class="main-services container clearfix">
-        <h3> Сервисы </h3>
-        <p>
-          Хороший интернет-магазин отличается от плохого не только ценами!
-          Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
-        </p>
-        <div class="main-services-type">
-          <ul class="main-services-menu">
-            <li>
-              <a href="#"> Доставка </a>
-            </li>
-            <li>
-              <a href="#"> Гарантия </a>
-            </li>
-            <li>
-              <a href="#"> Кредит </a>
-            </li>
-          </ul>
-          <span class="main-services-description-heading"> Доставка </span>
+      <div class="main-services">
+        <div class="container clearfix">
+          <h3> Сервисы </h3>
           <p>
-            Мы с удовольствием доставим ваш товар прямо
-            к вашему подъезду совершенно бесплатно!
-            Ведь мы неплохо заработаем,
-            поднимая его на ваш на этаж!
+            Хороший интернет-магазин отличается от плохого не только ценами!
+            Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
           </p>
+          <div class="main-services-type">
+            <ul class="main-services-menu">
+              <li>
+                <a href="#delivery"> Доставка </a>
+                <ul class="services-description">
+                  <li>
+                    <span class="main-services-description-heading"> Доставка </span>
+                    <p>
+                      Мы с удовольствием доставим ваш товар прямо
+                      к вашему подъезду совершенно бесплатно!
+                      Ведь мы неплохо заработаем,
+                      поднимая его на ваш на этаж!
+                    </p>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#guarante"> Гарантия </a>
+                <ul class="services-description">
+                  <li>
+                    <span class="main-services-description-heading"> Гарантия </span>
+                    <p>
+                      Если купленный у нас товар поломается или заискрит,
+                      а также в случае пожара, спровоцированного его возгаранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.
+                      Дом уж восстановите как-нибудь сами.
+                    </p>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#credit"> Кредит </a>
+                <ul class="services-description">
+                  <li>
+                    <span class="main-services-description-heading"> Кредит </span>
+                    <p>
+                      Залезть в долговую яму стало проще!
+                      Кредитные консультанты придут вам на помощь.
+                    </p>
+                    <a href="#"> Отправить заявку </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="main-company container clearfix">
