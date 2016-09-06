@@ -40,7 +40,7 @@ body {
   font-size: 13px;
   line-height: 24px;
   color: black;
-  font-family: "PT Sans";
+  font-family: "PT Sans", "Arial", sans-serif;
   font-weight: normal;
 }
 
@@ -137,6 +137,7 @@ header {
   padding: 0px 20px 0 48px;
   color: #ffffff;
   text-decoration: none;
+  margin-left: -5px;
 }
 
 .header-list a:hover {
@@ -271,7 +272,7 @@ header {
 }
 
 .header-navigation-menu li:last-child a {
-  padding-right: 39px;
+  padding-right: 38px;
 }
 
 .header-navigation-menu a:hover {
@@ -286,7 +287,7 @@ header {
 /*= main-begin ==========================================================================*/
 .main-promo-block {
   margin-top: 59px;
-  margin-bottom: 0px;
+  margin-bottom: 53px;
 }
 
 .main-promo-card {
@@ -370,8 +371,8 @@ header {
 
 .main-promo-slider a {
   display: block;
-  position: relative;
-  left: 25px;
+  position: absolute;
+  left: 195px;
   bottom: 122px;
   width: 198px;
   height: 38px;
@@ -397,17 +398,13 @@ header {
   font-family: "Cuprum";
   font-size: 18px;
   color: #ffffff;
-  position: relative;
-  left: 25px;
-  bottom: 250px;
+  position: absolute;
 }
 
 .main-promo-slider .slider-title {
   font-family: "Cuprum Bold";
   font-size: 30px;
   text-transform: uppercase;
-  left: 25px;
-  bottom: 250px;
   padding-right: 370px;
 }
 
@@ -451,8 +448,8 @@ header {
   float: left;
   width: 220px;
   height: 318px;
-  margin-right: 20px;
-  box-shadow: 0 0 0 1px #e5e5e5;
+  margin-right: 16px;
+  border: 1px solid #e5e5e5;
 }
 
 .main-product-card span {
@@ -498,25 +495,43 @@ header {
 
 .main-producers {
   margin-bottom: 87px;
+  box-shadow: 0 0 0 1px lightblue;
 }
 
 .main-producers ul {
   margin: 0px;
   padding: 0px;
+  box-shadow: 0 0 0 1px orange;
 }
 
 .main-producers li{
+  margin: 0px;
+  padding: 0px;
+  margin-right: 13px;
+  margin-bottom: 16px;
+  list-style: none;
   display: inline-block;
   vertical-align: top;
+}
+
+.main-producers li:nth-child(4n) {
+  margin-right: 0px;
 }
 
 .main-producers a {
   display: block;
   width: 220px;
   height: 145px;
-  margin-left: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 0 0 1px #e5e5e5;
+  border: 1px solid #e5e5e5;
+}
+
+.main-producers a:hover {
+  box-shadow: 0 5px 25px 5px rgba(41, 52, 73, 0.5);
+}
+
+.main-producers a:active {
+  box-shadow: 0 5px 10px 5px rgba(41, 52, 73, 0.5);
+  opacity: 0.5;
 }
 
 .main-services {
@@ -592,7 +607,7 @@ header {
 }
 
 .main-company-description li {
-  content: attr("-");
+  content:
 }
 
 .main-company-contacts {
@@ -614,7 +629,7 @@ header {
 }
 
 .footer-navigation p {
-  width: 380px;
+  width: 340px;
   float: left;
   margin-bottom: 50px;
   font-family: "Cuprum";
@@ -627,6 +642,10 @@ header {
   font-family: "Cuprum";
   font-size: 18px;
   color: #ffffff;
+}
+
+.footer-navigation a:hover {
+  text-decoration: underline;
 }
 
 .footer-navigation ul {
