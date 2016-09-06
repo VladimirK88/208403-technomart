@@ -1,40 +1,40 @@
-@font-face {
+@font-face  {
   font-family: "Cuprum";
   font-weight: 400;
   src: url("../fonts/cuprum.woff2");
 }
 
-@font-face {
+@font-face  {
   font-family: "Cuprum Bold";
   font-weight: 700;
   src: url("../fonts/cuprumbold.woff2");
 }
 
-@font-face {
+@font-face  {
   font-family: "Cuprum Italic";
   font-weight: 400;
   src: url("../fonts/cuprumitalic.woff2");
 }
 
-@font-face {
+@font-face  {
   font-family: "Cuprum Bold Italic";
   font-weight: 700;
   src: url("../fonts/cuprumbolditalic.woff2");
 }
 
-@font-face {
+@font-face  {
   font-family: "PT Sans";
   font-weight: 400;
   src: url("../fonts/ptsans.woff2");
 }
 
-@font-face {
+@font-face  {
   font-family: "PT Sans Bold";
   font-weight: 700;
   src: url("../fonts/ptsansbold.woff2");
 }
 
-body {
+body  {
   margin: 0px;
   padding: 0px;
   font-size: 13px;
@@ -44,7 +44,7 @@ body {
   font-weight: normal;
 }
 
-h2 {
+h2  {
   font-size: 30px;
   color: #32425c;
   line-height: 30px;
@@ -53,7 +53,7 @@ h2 {
   font-family: "Cuprum";
 }
 
-h3 {
+h3  {
   font-size: 30px;
   color: black;
   line-height: 24px;
@@ -61,7 +61,7 @@ h3 {
   font-family: "Cuprum";
 }
 
-h4 {
+h4  {
   font-size: 17px;
   color: black;
   line-height: 30px;
@@ -70,13 +70,13 @@ h4 {
   font-family: "PT Sans";
 }
 
-.container {
+.container  {
   width: 940px;
   margin: 0 auto;
   padding: 0 10px;
 }
 
-.clearfix::after {
+.clearfix::after  {
   content: "";
   display: table;
   clear: both;
@@ -84,7 +84,7 @@ h4 {
 
 /*= header-begin ==========================================================================*/
 
-header {
+header  {
   background-color: #f1f5f7;
 }
 
@@ -98,25 +98,32 @@ header {
 
 .header-top img {
   float: left;
+  width: 220px;
+  height: 42px;
   box-shadow: 0 5px #b52933;
 }
 
-.header-top form {
+.header-top input {
   float: left;
-  width: 270;
-}
-
-.header-top form input {
+  margin: 0px;
+  padding: 0px 0px 0px 48px;
+  width: 294px;
+  line-height: 42px;
   font-family: "Cuprum";
   font-size: 17px;
   color: #ffffff;
-  background-color: #293449;
   border: none;
-  padding: 11px 10px 11px 40px;
+  background-color: #293449;
 }
 
-.header-top form input:hover {
+.header-top input:hover {
   background-color: #212a3a;
+}
+
+.header-top input:checked {
+  box-shadow: none;
+  color: black;
+  background-color: #ffffff;
 }
 
 .header-list {
@@ -399,6 +406,7 @@ header {
   font-size: 18px;
   color: #ffffff;
   position: absolute;
+  left: 195px;
 }
 
 .main-promo-slider .slider-title {
