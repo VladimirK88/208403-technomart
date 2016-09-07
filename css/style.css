@@ -585,6 +585,61 @@ header  {
 }
 
 .main-promo-slider {
+  position: absolute;
+  width: 620px;
+  margin-right: 20px;
+  float: left;
+}
+
+.slide {
+  min-height: 266px;
+  background-repeat: no-repeat;
+  background-position: 100% 0px;
+}
+
+.slide-text {
+  width: 280px;
+  padding: 22px 0px;
+}
+
+.slide-title {
+  font-weight: 500;
+  font-size: 36px;
+}
+
+.slide  .slider-btn {
+  display: block;
+  width: 195px;
+  height: 38;
+
+  font-weight: 300;
+  font-size: 13px;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  background: #ee3643;
+  border-radius: 3px;
+}
+
+.slide:nth-child(1) {
+  background-image: url("../img/slider_drill.jpg");
+}
+
+.slide:nth-child(2) {
+  background-image: url("../img/slider_drill_2.jpg");
+}
+
+.slide {
+  display: none;
+}
+
+.slide:nth-child(1) {
+  display: block;
+}
+/*
+.main-promo-slider {
   position: relative;
   width:  620px;
   float: left;
@@ -637,7 +692,7 @@ header  {
   font-size: 30px;
   text-transform: uppercase;
 }
-
+*/
 .main-heading {
   margin-bottom: 20px;
   background-color: #f7f3ec;
@@ -782,22 +837,34 @@ header  {
 
 .product-card a {
   display: block;
+  position: relative;
   width: 123px;
-  height: 38px;
+  height: 40px;
   background-color: #ee3643;
   margin: 0px auto;
   text-decoration: none;
   text-align: center;
   color: #ffffff;
-  line-height: 38px;
+  line-height: 40px;
   border-radius: 2px;
 }
 
-.product-card a:hover {
+.product-card a.price:after {
+  position: absolute;
+  top: 0;
+  right: -20px;
+  width: 0;
+  height: 0;
+  content: '';
+  border: 20px solid #ffffff;
+  border-left-color: #ee3643;
+}
+
+.product-card a.price:hover {
   background-color: #ca2c37;
 }
 
-.main-product-card a:active {
+.main-product-card a.price:active {
   background-color: #ba2732;
 }
 
@@ -1241,6 +1308,194 @@ header  {
 .catalog-filter {
   width: 220px;
   float: left;
+}
+
+.range-container  {
+  position: relative;
+  width: 220px;
+  height: 127px;
+  margin-bottom: 20px;
+}
+
+.range  {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 80px;
+  background-color: #f7f3ec;
+  border-radius: 2px;
+  margin-bottom: 9px;
+}
+
+.scale  {
+  position: absolute;
+  top: 50%;
+  left: 25px;
+  width: 170px;
+  height: 2px;
+  background-color: #d7dcde;
+}
+
+.scale::after {
+  content: "_________________________";
+  position: absolute;
+  top: -18px;
+  width: 140px;
+  height: 2px;
+  font-weight: bold;
+  color: #00ca74;
+}
+
+.scale  div {
+  position: absolute;
+  top: -10px;
+  width: 22px;
+  height: 22px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px 0 black;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.scale  div::after  {
+  content: ".";
+  position: absolute;
+  font-size: 40px;
+  top: -14px;
+  left: 7px;
+  color: #d7dcde;
+}
+
+.marker-to  {
+  position: absolute;
+  left: 130px;
+}
+
+
+.range-container  input[type="text"]:first-child  {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.range-container span  {
+  position: absolute;
+  left: 48%;
+  bottom: 14%;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+.range-container  input[type="text"]:last-child  {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+input[type="text"]  {
+  width: 95px;
+  height: 38px;
+  background-color: #f7f3ec;
+  text-align: center;
+  font-size: 17px;
+  border: none;
+  border-radius: 2px;
+}
+
+label {
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+input[type="checkbox"]  {
+  display: none;
+}
+
+input[type="checkbox"]  + label {
+  display: block;
+  margin: 15px  0px;
+  line-height: 20px;
+  padding-left: 45px;
+  position: relative;
+  cursor: pointer;
+}
+
+input[type="checkbox"]  + label::before {
+  content: "\2610";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 28px;
+  font-family: "symbols-technomart";
+  color: #c1c1c1;
+}
+
+input[type="checkbox"]  + label:hover::before {
+  color: #b5b5b5;
+}
+
+input[type="checkbox"]  + label:active::before {
+  color: #e9e9e9;
+}
+
+input[type="checkbox"]:checked  + label::before {
+  content: "\2611";
+}
+
+input[type="radio"]  {
+  display: none;
+}
+
+input[type="radio"]  + label {
+  display: block;
+  margin: 15px  0px;
+  line-height: 20px;
+  padding-left: 45px;
+  position: relative;
+  cursor: pointer;
+}
+
+input[type="radio"]  + label::before {
+  content: "\25cb";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 28px;
+  font-family: "symbols-technomart";
+  color: #c1c1c1;
+}
+
+input[type="radio"]  + label:hover::before {
+  color: #b5b5b5;
+}
+
+input[type="radio"]  + label:active::before {
+  color: #e9e9e9;
+}
+
+input[type="radio"]:checked  + label::before {
+  content: "\25cf";
+}
+
+input[type="submit"] {
+  margin-top: 70px;
+  width: 140px;
+  height: 38px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  border: 1px solid #e5e5e5;
+  cursor: pointer;
+}
+
+input[type="submit"]:active  {
+  border: 1px solid #bdc6ca;
+}
+
+input[type="submit"]:hover  {
+  border: 1px solid #ee3643;
 }
 
 .filter-header  {

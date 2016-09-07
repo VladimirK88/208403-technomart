@@ -51,13 +51,13 @@
         <div class="header-navigation">
           <ul class="header-navigation-menu">
             <li>
-              <a href="#"> Главная </a>
+              <a href="index.html"> Главная </a>
             </li>
             <li>
               <a href="#"> Компания </a>
             </li>
             <li>
-              <a href="#"> Каталог </a>
+              <a href="inner.html"> Каталог </a>
             </li>
             <li>
               <a href="#"> Новости </a>
@@ -103,10 +103,17 @@
           </div>
           <div class="filter-price">
             <h4> Цена: </h4>
-            <input type="range" min="0" max="30000" step="1" value="">
-            <input type="text" name="name" value="0">
-            <span> - </span>
-            <input type="text" name="name" value="30000">
+            <div class="range-container">
+              <div class="range">
+                <div class="scale">
+                  <div class="marker-from"></div>
+                  <div class="marker-to"></div>
+                </div>
+              </div>
+              <input type="text" name="name" value="0">
+              <span>_</span>
+              <input type="text" name="name" value="30000">
+            </div>
           </div>
           <div class="filter-producers">
             <h4> Производители: </h4>
@@ -123,16 +130,10 @@
           </div>
           <div class="filter-feeding">
             <h4> Питание: </h4>
-            <ul>
-              <li>
-                <input type="radio" name="feed" value="Аккумуляторные" id="feed1" checked="">
-                <label for="feed1"> Аккумуляторные </label>
-              </li>
-              <li>
-                <input type="radio" name="feed" value="Сетевые" id="feed2">
-                <label for="feed2"> Сетевые </label>
-              </li>
-            </ul>
+            <input type="radio" name="feed" value="Аккумуляторные" id="feed1" checked>
+            <label for="feed1"> Аккумуляторные </label>
+            <input type="radio" name="feed" value="Сетевые" id="feed2">
+            <label for="feed2"> Сетевые </label>
           </div>
           <input type="submit" name="show-products" value="Показать">
         </form>
@@ -168,7 +169,7 @@
               <span> Перфоратор BOSCH </span>
               <span> BFG 3000 </span>
               <span class="old-price"> 22500 Р. </span>
-              <a href="#"> 15500 Р. </a>
+              <a class="price" href="#"> 15500 Р. </a>
             </div>
           </article>
           <article class="product-card product-card-bckgrnd">
@@ -181,7 +182,7 @@
               <span> Перфоратор BOSCH </span>
               <span> BFG 6000 </span>
               <span class="old-price"> 30500 Р. </span>
-              <a href="#"> 25500 Р. </a>
+              <a class="price" href="#"> 25500 Р. </a>
             </div>
           </article>
           <article class="product-card product-card-bckgrnd">
@@ -193,7 +194,7 @@
             <div class="product-card-description">
               <span> Перфоратор BOSCH </span>
               <span> 12500 Р. </span>
-              <a href="#"> 15500 Р. </a>
+              <a class="price"  href="#"> 15500 Р. </a>
             </div>
           </article>
           <article class="product-card product-card-bckgrnd">
@@ -206,7 +207,7 @@
               <span> Перфоратор BOSCH </span>
               <span> BFG 3000 </span>
               <span class="old-price"> 22500 Р. </span>
-              <a href="#"> 15500 Р. </a>
+              <a class="price"  href="#"> 15500 Р. </a>
             </div>
           </article>
           <article class="product-card product-card-bckgrnd">
@@ -219,7 +220,7 @@
               <span> Перфоратор BOSCH </span>
               <span> BFG 6000 </span>
               <span class="old-price"> 30500 Р. </span>
-              <a href="#"> 25500 Р. </a>
+              <a class="price"  href="#"> 25500 Р. </a>
             </div>
           </article>
           <article class="product-card product-card-bckgrnd">
@@ -231,7 +232,7 @@
             <div class="product-card-description">
               <span> Перфоратор BOSCH </span>
               <span> 12500 Р. </span>
-              <a href="#"> 15500 Р. </a>
+              <a class="price"  href="#"> 15500 Р. </a>
             </div>
           </article>
           <article class="product-card product-card-bckgrnd">
@@ -244,7 +245,7 @@
               <span> Перфоратор BOSCH </span>
               <span> BFG 3000 </span>
               <span class="old-price"> 22500 Р. </span>
-              <a href="#"> 15500 Р. </a>
+              <a class="price"  href="#"> 15500 Р. </a>
             </div>
           </article>
           <article class="product-card product-card-bckgrnd">
@@ -257,7 +258,7 @@
               <span> Перфоратор BOSCH </span>
               <span> BFG 6000 </span>
               <span class="old-price"> 30500 Р. </span>
-              <a href="#"> 25500 Р. </a>
+              <a class="price"  href="#"> 25500 Р. </a>
             </div>
           </article>
           <article class="product-card product-card-bckgrnd">
@@ -269,7 +270,7 @@
             <div class="product-card-description">
               <span> Перфоратор BOSCH </span>
               <span> 12500 Р. </span>
-              <a href="#"> 15500 Р. </a>
+              <a class="price"  href="#"> 15500 Р. </a>
             </div>
           </article>
         </div>
