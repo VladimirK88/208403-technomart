@@ -143,8 +143,6 @@ h4  {
   clear: both;
 }
 
-/*= header-begin ==========================================================================*/
-
 header  {
   background-color: #f1f5f7;
 }
@@ -472,9 +470,7 @@ header  {
 .header-navigation-menu a:active {
   color: #b2b2b2;
 }
-/*= header-end ==========================================================================*/
 
-/*= main-begin ==========================================================================*/
 .main-btn {
   display: inline-block;
   height: 38px;
@@ -585,7 +581,7 @@ header  {
 }
 
 .main-promo-slider {
-  position: absolute;
+  position: relative;
   width: 620px;
   margin-right: 20px;
   float: left;
@@ -597,9 +593,62 @@ header  {
   background-position: 100% 0px;
 }
 
+.slide::before  {
+  content: "\3c";
+  font-family: "symbols-technomart";
+  font-size: 45px;
+  color: #ffffff;
+  position: absolute;
+  top: 120px;
+  left: 25px;
+}
+
+.slide::after  {
+  content: "\3e";
+  font-family: "symbols-technomart";
+  font-size: 45px;
+  color: #ffffff;
+  position: absolute;
+  top: 120px;
+  right: 25px;
+}
+
+.slider input[type="radio"] {
+  display: none;
+}
+
+.slider-controls {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  width: 200px;
+  margin-left: -100px;
+  text-align: center;
+}
+
+.slider-controls label {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  margin: 0 3px;
+
+  vertical-align: top;
+
+  background: #ffffff;
+  border: 3px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
 .slide-text {
   width: 280px;
-  padding: 22px 0px;
+  padding: 22px 25px;
+  color: #ffffff;
+  font-size: 36px;
+}
+
+.slide-text span:last-child {
+  font-size: 18px;
 }
 
 .slide-title {
@@ -611,16 +660,25 @@ header  {
   display: block;
   width: 195px;
   height: 38;
-
+  position: absolute;
+  bottom: 22px;
   font-weight: 300;
   font-size: 13px;
   text-align: center;
   color: #ffffff;
   text-transform: uppercase;
   text-decoration: none;
-
+  line-height: 38px;
   background: #ee3643;
   border-radius: 3px;
+}
+
+.slide  .slider-btn:hover {
+  background: #ca2c37;
+}
+
+.slide  .slider-btn:active {
+  background: #ba2732;
 }
 
 .slide:nth-child(1) {
@@ -635,64 +693,19 @@ header  {
   display: none;
 }
 
-.slide:nth-child(1) {
+#btn-1:checked ~ .slides .slide:nth-child(1) {
   display: block;
 }
-/*
-.main-promo-slider {
-  position: relative;
-  width:  620px;
-  float: left;
-  margin-right: 20px;
-}
 
-.main-promo-slider  img {
-  width: 620px;
-  height: 266px;
-}
-
-.main-promo-slider a {
+#btn-2:checked ~ .slides .slide:nth-child(2) {
   display: block;
-  position: absolute;
-  bottom: 25px;
-  left: 25px;
-  width: 198px;
-  height: 38px;
-  background-color: #ee3643;
-  text-decoration: none;
-  font-family: "Cuprum";
-  font-size: 14px;
-  color: #ffffff;
-  text-align: center;
-  line-height: 38px;
-  border-radius: 2px;
 }
 
-.main-promo-slider a:hover {
-  background-color: #ca2c37;
+#btn-1:checked ~ .slider-controls label[for="btn-1"],
+#btn-2:checked ~ .slider-controls label[for="btn-2"] {
+  background: #ee3643;
 }
 
-.main-promo-slider a:active {
-  background-color: #ba2732;
-}
-
-.main-promo-slider span {
-  display: block;
-  font-family: "Cuprum";
-  font-size: 18px;
-  color: #ffffff;
-  position: absolute;
-  top: 60px;
-  left: 25px;
-}
-
-.main-promo-slider .slider-title {
-  top: 25px;
-  font-family: "Cuprum Bold";
-  font-size: 30px;
-  text-transform: uppercase;
-}
-*/
 .main-heading {
   margin-bottom: 20px;
   background-color: #f7f3ec;
@@ -1114,10 +1127,6 @@ header  {
   top: 25px;
 }
 
-/*= main-end ==========================================================================*/
-
-/*= footer-begin ==========================================================================*/
-
 .footer-navigation {
   background-color: #32425c;
 }
@@ -1270,9 +1279,7 @@ header  {
   color: #ee3643;
   text-decoration: none;
 }
-/*= footer-end ==========================================================================*/
 
-/*= inner-begin ==========================================================================*/
 .catalog-navigation {
   margin: 20px  0px;
   padding: 0px;
@@ -1512,12 +1519,12 @@ input[type="submit"]:hover  {
   border-bottom: 1px solid #e5e5e5;
 }
 
-.Catalog-products {
+.catalog-products {
   width: 700px;
   float: right;
 }
 
-.Catalog-sort {
+.catalog-sort {
   height: 38px;
   line-height: 38px;
   padding-left: 20px;
@@ -1525,12 +1532,12 @@ input[type="submit"]:hover  {
   background-color: #f7f3ec;
 }
 
-.Catalog-sort ul{
+.catalog-sort ul{
   padding: 0px;
   margin: 0px;
 }
 
-.Catalog-sort li  {
+.catalog-sort li  {
   display: inline-block;
   list-style: none;
   line-height: 38px;
@@ -1538,47 +1545,47 @@ input[type="submit"]:hover  {
   margin: 0px;
 }
 
-.Catalog-sort a {
+.catalog-sort a {
   text-decoration: none;
   color: #c6c2bd;
   border-bottom: 1px  dotted  #ee3643;
   margin-right: 60px;
 }
 
-.Catalog-sort a:hover {
+.catalog-sort a:hover {
   color: black;
   border-bottom: 1px  solid  #ee3643;
 }
 
-.Catalog-sort a:hover:active {
+.catalog-sort a:hover:active {
   color: #ee3643;
   border-bottom: none;
 }
 
-a.Catalog-sort-btn {
+a.catalog-sort-btn {
   margin-right: 0px;
   border-bottom: none;
 }
 
-a.Catalog-sort-btn:hover {
+a.catalog-sort-btn:hover {
   border-bottom: none;
 }
 
-.Catalog-sort-btn {
+.catalog-sort-btn {
   width: 40px;
   float: right;
   font-size: 0px;
 }
 
-.Catalog-sort-btn span  {
+.catalog-sort-btn span  {
   font-size: 23px;
 }
 
-.Catalog-products .product-card {
+.catalog-products .product-card {
   margin-bottom: 20px;
 }
 
-.Catalog-products .product-card:nth-child(3n) {
+.catalog-products .product-card:nth-child(3n) {
   margin-right: 0px;
 }
 
@@ -1652,15 +1659,15 @@ a.current-page  {
   list-style: none;
 }
 
-.Catalog-sort span {
+.catalog-sort span {
   float: left;
 }
 
-.Catalog-sort ul {
+.catalog-sort ul {
   float: right;
 }
 
-.Catalog-sort li {
+.catalog-sort li {
   display: inline;
   list-style: none;
 }
@@ -1669,4 +1676,3 @@ a.current-page  {
   list-style: none;
   display: inline-block;
 }
-/*= inner-end ==========================================================================*/
