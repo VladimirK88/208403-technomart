@@ -1608,6 +1608,7 @@ a.current-page  {
 }
 
 .modal-content {
+  display: none;
   position: absolute;
   top: 2590px;
   left: 50%;
