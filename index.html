@@ -125,7 +125,7 @@
       </div>
       <div class="main-products container clearfix">
         <article class="product-card main-product-card-bckgrnd">
-          <img src="img/BFG_9000.jpg" alt="BFG_9000">
+          <img src="img/bfg_9000.jpg" alt="bfg_9000">
           <div class="product-card-btn">
             <a class="buy" href="#product-card-btn"> Купить </a>
             <a class="to-favorite" href="#product-card-btn"> В закладки </a>
@@ -136,7 +136,7 @@
           <a class="price" href="#"> 25500 Р. </a>
         </article>
         <article class="product-card main-product-card-bckgrnd">
-          <img src="img/BFG_3000.jpg" alt="BFG_3000">
+          <img src="img/bfg_3000.jpg" alt="bfg_3000">
           <div class="product-card-btn">
             <a class="buy" href="#product-card-btn"> Купить </a>
             <a class="to-favorite" href="#product-card-btn"> В закладки </a>
@@ -147,7 +147,7 @@
           <a class="price" href="#"> 15500 Р. </a>
         </article>
         <article class="product-card main-product-card-bckgrnd">
-          <img src="img/BFG_6000.jpg" alt="BFG_6000">
+          <img src="img/bfg_6000.jpg" alt="bfg_6000">
           <div class="product-card-btn">
             <a class="buy" href="#product-card-btn"> Купить </a>
             <a class="to-favorite" href="#product-card-btn"> В закладки </a>
@@ -158,7 +158,7 @@
           <a class="price" href="#"> 25500 Р. </a>
         </article>
         <article class="product-card main-product-card-bckgrnd">
-          <img src="img/BFG_2000.jpg" alt="BFG_2000">
+          <img src="img/bfg_2000.jpg" alt="bfg_2000">
           <div class="product-card-btn">
             <a class="buy" href="#product-card-btn"> Купить </a>
             <a class="to-favorite" href="#product-card-btn"> В закладки </a>
@@ -291,8 +291,8 @@
             <br>
             заехав в наш офис:
           </p>
-          <img src="img/map.jpg" alt="contacts-map">
-          <a class="main-btn" href="#write"> Заблудились? Напишите нам! </a>
+          <img  class="map-open" src="img/map.jpg" alt="contacts-map">
+          <a class="main-btn  write-us-open-window" href="#write"> Заблудились? Напишите нам! </a>
         </div>
       </div>
     </main>
@@ -387,21 +387,30 @@
     <div class="modal-content write-us">
       <button class="modal-content-close" type="button" title="Закрыть"> Закрыть </button>
       <form class="write-us-form" action="#write-us" method="post">
-        <div class="user-name">
-          <span> Ваше имя: </span>
-          <input type="text" name="name" placeholder="Представьтесь, пожалуйста">
+        <div class="modal-content-container">
+          <div class="user-name">
+            <span> Ваше имя: </span>
+            <input type="text" name="name" placeholder="Представьтесь, пожалуйста">
+          </div>
+          <div class="user-email">
+            <span> Ваш e-mail: </span>
+            <input type="text" name="name" placeholder="Для отправки ответа">
+          </div>
+          <div class="message">
+            <span> Текст письма: </span>
+            <textarea name="name" rows="8" cols="40"  placeholder="В свободной форме"></textarea>
+          </div>
         </div>
-        <div class="user-email">
-          <span> Ваш e-mail: </span>
-          <input type="text" name="name" placeholder="Для отправки ответа">
+        <div class="background-btns">
+          <div class="write-us-btn  modal-content-container">
+            <input type="submit" name="name" value="Отправить">
+          </div>
         </div>
-        <div class="message">
-          <span> Текст письма: </span>
-          <input type="text" name="name" placeholder="В свободной форме">
-        </div>
-        <div class="write-us-btn">
-          <input type="submit" name="name" value="Отправить">
-        </div>
+      </form>
+    </div>
+    <div class="modal-content-map">
+      <button class="modal-content-close" type="button" title="Закрыть"> Закрыть </button>
+      <div class="map"></div>
       </form>
     </div>
     <script src="js/jquery-3.1.0.min.js"></script>
