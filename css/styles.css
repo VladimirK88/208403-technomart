@@ -95,8 +95,8 @@
 .icon-bookmark::before { content: "🔖"; } /* "\1f516" */
 
 body  {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   min-width: 960px;
   font-size: 13px;
   line-height: 24px;
@@ -132,6 +132,7 @@ h4  {
 }
 
 .container  {
+  position: relative;
   width: 940px;
   margin: 0 auto;
   padding: 0 10px;
@@ -170,12 +171,16 @@ header  {
   filter: saturate(50%);
 }
 
-.header-top input {
+.search {
   float: left;
+  width: 200px;
+}
+
+.header-top input[type="search"] {
   position: relative;
-  margin: 0px;
-  padding: 0px 0px 0px 48px;
-  width: 245px;
+  width: 200px;
+  margin: 0;
+  padding: 0 0 0 48px;
   line-height: 42px;
   font-family: "Cuprum";
   font-size: 17px;
@@ -184,19 +189,29 @@ header  {
   background-color: #293449;
 }
 
-.header-top input::after  {
-  content: "🔍";
+.search-ic  {
   position: absolute;
-  top: 0px;
-  left: 0px;
-  color: red;
+  top: 10px;
+  left: 243px;
+  width: 22px;
+  height: 22px;
+  background-image: url("../img/spritesheet.png");
+  background-position: -56px -3px;
 }
 
-.header-top input:hover {
+.search:hover .search-ic {
+  background-position: -30px -3px;
+}
+
+input[type="search"]:focus + .search-ic {
+  background-position: -3px -3px;
+}
+
+.header-top input[type="search"]:hover {
   background-color: #212a3a;
 }
 
-.header-top input:focus {
+.header-top input[type="search"]:focus {
   box-shadow: none;
   border: none;
   color: black;
@@ -212,13 +227,14 @@ header  {
 
 .header-list li {
   display: inline-block;
+  vertical-align: baseline;
 }
 
 .header-list a {
   display: block;
   height: 42px;
   line-height: 42px;
-  padding: 0px 20px 0 10px;
+  padding: 0 20px 0 10px;
   color: #ffffff;
   text-decoration: none;
   margin-left: -5px;
@@ -268,7 +284,7 @@ header  {
 
 .header-list li:last-child a {
   background-color: #63a63e;
-  padding: 0px 20px;
+  padding: 0 20px;
 }
 
 .header-list li:last-child a:hover {
@@ -286,7 +302,6 @@ header  {
 .header-description p {
   font-family: "Cuprum Bold Italic";
   font-size: 16px;
-  font-style: italic;
   color: #ee3643;
   line-height: 23px;
 }
@@ -306,7 +321,7 @@ header  {
   line-height: 18px;
   color: #e9292a;
   border: 3px solid #ffffff;
-  padding: 8px 0px 8px 10px;
+  padding: 8px 0 8px 10px;
 }
 
 .header-contacts a::before  {
@@ -330,6 +345,7 @@ header  {
 
 .header-sign-up a {
   display: inline-block;
+  vertical-align: top;
   padding: 10px 25px;
   vertical-align: middle;
   text-decoration: none;
@@ -369,6 +385,7 @@ header  {
 
 .header-signed-up > a  {
   display: inline-block;
+  vertical-align: top;
   text-decoration: none;
   height: 45px;
   line-height: 45px;
@@ -383,7 +400,7 @@ header  {
   font-family: "symbols-technomart";
   color: #c5c5c5;
   font-size: 18px;
-  padding: 0px  10px;
+  padding: 0  10px;
 }
 
 .header-signed-up > a:hover span  {
@@ -396,14 +413,15 @@ header  {
 }
 
 .login-btn  {
-  margin: 0px;
-  padding: 0px;
-  font-style: "Cuprum";
+  margin: 0;
+  padding: 0;
+  font-family: "Cuprum";
   font-size: 16px;
 }
 
 .header-signed-up li {
   display: inline-block;
+  vertical-align: top;
   position: relative;
   list-style: none;
   margin: 5px 10px;
@@ -437,13 +455,14 @@ header  {
 }
 
 .header-navigation-menu {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
 .header-navigation-menu li {
   display: inline-block;
+  vertical-align: top;
   line-height: 55px;
 }
 
@@ -455,13 +474,9 @@ header  {
   color: #ffffff;
   font-family: "Cuprum";
   font-size: 17px;
-  margin-left: -5px;
-  padding: 0px 34px;
+  margin-left: -4px;
+  padding: 0 34px;
   box-shadow: 0 5px #293449;
-}
-
-.header-navigation-menu li:last-child a {
-  padding-right: 38px;
 }
 
 .header-navigation-menu a:hover {
@@ -474,16 +489,19 @@ header  {
 
 .main-btn {
   display: inline-block;
+  vertical-align: top;
   height: 38px;
   background-color: #ee3643;
   text-decoration: none;
   font-family: "Cuprum";
   font-size: 14px;
   color: #ffffff;
+  vertical-align: text-top;
   text-align: center;
   text-transform: uppercase;
   line-height: 38px;
   border-radius: 2px;
+  padding: 0 50px;
 }
 
 .main-btn:hover {
@@ -512,6 +530,7 @@ header  {
 
 .main-promo-card span {
   display: inline-block;
+  vertical-align: baseline;
   font-family: "Cuprum Bold";
   font-size: 24px;
   color: #ffffff;
@@ -558,19 +577,19 @@ header  {
 
 .technik {
   background-color: #cc79d1;
-  margin-right: 0px;
+  margin-right: 0;
   background-image: url("../img/promo_technik.png");
 }
 
 .discount {
   background-color: #85d179;
-  margin-right: 0px;
+  margin-right: 0;
   background-image: url("../img/promo_discount.png");
 }
 
 .delivery {
   background-color: #f6b22d;
-  margin-right: 0px;
+  margin-right: 0;
   background-image: url("../img/promo_delivery.png");
 }
 
@@ -579,8 +598,8 @@ header  {
   position: absolute;
   width: 60px;
   height: 59px;
-  top: 0px;
-  right: 0px;
+  top: 0;
+  right: 0;
 }
 
 .main-promo-slider {
@@ -593,7 +612,7 @@ header  {
 .slide {
   min-height: 266px;
   background-repeat: no-repeat;
-  background-position: 100% 0px;
+  background-position: 100% 0;
 }
 
 .slide::before  {
@@ -631,6 +650,7 @@ header  {
 
 .slider-controls label {
   display: inline-block;
+  vertical-align: bottom;
   width: 4px;
   height: 4px;
   margin: 0 3px;
@@ -661,29 +681,10 @@ header  {
   font-size: 36px;
 }
 
-.slide  .slider-btn {
-  display: block;
-  width: 195px;
-  height: 38;
+.slide  a {
+  width: 100px;
   position: absolute;
   bottom: 22px;
-  font-weight: 300;
-  font-size: 13px;
-  text-align: center;
-  color: #ffffff;
-  text-transform: uppercase;
-  text-decoration: none;
-  line-height: 38px;
-  background: #ee3643;
-  border-radius: 3px;
-}
-
-.slide  .slider-btn:hover {
-  background: #ca2c37;
-}
-
-.slide  .slider-btn:active {
-  background: #ba2732;
 }
 
 .slide:nth-child(1) {
@@ -722,37 +723,17 @@ header  {
 }
 
 .main-heading a {
-  display: block;
+  float: right;
   margin-right: 24px;
   margin-top: 20px;
-  float: right;
-  display: block;
-  width: 198px;
-  height: 38px;
-  background-color: #ee3643;
-  text-decoration: none;
-  font-family: "Cuprum";
-  font-size: 14px;
-  color: #ffffff;
-  text-align: center;
-  text-transform: uppercase;
-  line-height: 38px;
-  border-radius: 2px;
-}
-
-.main-heading a:hover {
-  background-color: #ca2c37;
-}
-
-.main-heading a:active {
-  background-color: #ba2732;
+  width: 160px;
 }
 
 .product-card {
   position: relative;
   float: left;
   width: 220px;
-  height: 318px;
+  min-height: 318px;
   margin-right: 16px;
   border: 1px solid #e5e5e5;
   text-align: center;
@@ -763,8 +744,8 @@ header  {
   position: absolute;
   width: 60px;
   height: 59px;
-  top: 0px;
-  right: 0px;
+  top: 0;
+  right: 0;
 }
 
 .product-card:hover  {
@@ -795,9 +776,9 @@ header  {
   display: block;
   width: 135px;
   height: 38px;
-  margin: 0px auto 8px;
+  margin: 0 auto 8px;
   background-color: #63a63e;
-  box-shadow: inset 0px -3px  0px 0px #367315;
+  box-shadow: inset 0 -3px  0 0 #367315;
   text-transform: uppercase;
 }
 
@@ -826,13 +807,13 @@ header  {
   height: 38px;
   margin: 8px auto  0px;
   background-color: #ffffff;
-  box-shadow: inset 0px 0px 0px 3px #63a63e;
+  box-shadow: inset 0 0 0 3px #63a63e;
   text-transform: uppercase;
   color: #32425c;
 }
 
 .product-card  a.to-favorite:hover {
-  box-shadow: inset 0px 0px 0px 3px #32425c;
+  box-shadow: inset 0 0 0 3px #32425c;
   background-color: #ffffff;
 }
 
@@ -843,7 +824,7 @@ header  {
 .product-card  span {
   font-family: "PT Sans Bold";
   font-size: 18px;
-  padding: 0px 20px;
+  padding: 0 20px;
 }
 
 .old-price {
@@ -860,7 +841,7 @@ header  {
   width: 123px;
   height: 40px;
   background-color: #ee3643;
-  margin: 0px auto;
+  margin: 0 auto;
   text-decoration: none;
   text-align: center;
   color: #ffffff;
@@ -892,7 +873,7 @@ header  {
 }
 
 .product-card:last-child {
-  margin-right: 0px;
+  margin-right: 0;
 }
 
 .main-producers {
@@ -900,13 +881,13 @@ header  {
 }
 
 .main-producers ul {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 .main-producers li{
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   margin-right: 13px;
   margin-bottom: 16px;
   list-style: none;
@@ -915,18 +896,22 @@ header  {
 }
 
 .main-producers li:nth-child(4n) {
-  margin-right: 0px;
+  margin-right: 0;
 }
 
 .main-producers a {
-  display: flex;
+  display: block;
+  position: relative;
   width: 220px;
   height: 145px;
   border: 1px solid #e5e5e5;
 }
 
 .main-producers img {
-  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .main-producers a:hover {
@@ -951,16 +936,13 @@ header  {
 }
 
 .main-services-type {
-  width: 620px;
-  height: 183px;
   float: left;
   margin-top: 70px;
-  margin-right: 80px;
 }
 
 .main-services-type ul {
-  margin: 0px;
-  padding: 0px;
+  margin: 0 80px 0 0;
+  padding: 0;
   float: left;
   height: 183px;
 }
@@ -969,19 +951,7 @@ header  {
   list-style: none;
 }
 
-.main-services-menu {
-  position: relative;
-}
-
-.main-services-description-heading  {
-  font-family: "Cuprum";
-  font-size: 32px;
-  text-transform: uppercase;
-  line-height: 24px;
-  color: #32425c;
-}
-
-.main-services-menu > li  > a {
+.main-services-menu a {
   display: block;
   width: 220px;
   height: 60px;
@@ -996,25 +966,76 @@ header  {
   border-bottom: 1px solid #293449;
 }
 
-.main-services-menu > li > a:focus {
+.main-services-menu a:focus {
   background-color: #ffffff;
   color: #32425c;
   border-top: 1px solid #ffffff;
   border-bottom: 1px solid #ffffff;
 }
 
-.main-services-menu > li  > a:hover {
+.main-services-menu a:hover {
   background-color: #293449;
 }
 
+.service  {
+  float: right;
+  margin-top: 70px;
+  width: 620px;
+  position: relative;
+}
 
-.services-btn-g input[type="radio"]:checked .test {
+.service span {
+  font-family: "Cuprum";
+  font-size: 32px;
+  text-transform: uppercase;
+  line-height: 24px;
+  color: #32425c;
+}
+
+.service  p {
+  width: 350px;
+  margin: 24px  0;
+}
+
+.dlvry::after {
+  content: url("../img/delivery.png");
+  position: absolute;
+  top: 20px;
+  right: 0;
+}
+
+.grnte::after {
+  content: url("../img/guarantee.png");
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.crdt::after {
+  content: url("../img/credit.png");
+  position: absolute;
+  top: -10px;
+  right: 0;
+}
+
+.dlvry,
+.grnte,
+.crdt
+  {
+  display: none;
+}
+
+.service-show {
+  display: block;
+}
+
+.main-company-description {
   display: block;
 }
 
 .main-company-description ul  {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 .main-company-description li  {
@@ -1046,10 +1067,6 @@ header  {
   font-size: 18px;
 }
 
-.main-company-description a {
-  width: 220px;
-}
-
 .main-company-contacts {
   width: 300px;
   float: right;
@@ -1060,7 +1077,7 @@ header  {
 }
 
 .main-company-contacts  a {
-  width: 300px;
+  width: 200px;
   position: relative;
   top: 25px;
 }
@@ -1097,23 +1114,24 @@ header  {
 
 .footer-navigation-menu {
   margin: 0px;
-  padding: 15px  0px 0px 0px;
+  padding: 15px 0 0 0;
   width: 580px;
   float: right;
 }
 
 .footer-navigation-menu ul{
   float: right;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 .footer-navigation-menu-top li,
 .footer-navigation-menu-bottom li {
   display: inline-block;
+  vertical-align: top;
   height: 58px;
   line-height: 58px;
-  padding: 0px 25px;
+  padding: 0 25px;
 }
 
 .footer-navigation-menu-bottom a {
@@ -1151,8 +1169,8 @@ header  {
 }
 
 .footer-social  ul  {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 .footer-social li {
@@ -1164,7 +1182,7 @@ header  {
   display: inline-block;
   width: 40px;
   height: 40px;
-  font-size: 0px;
+  font-size: 0;
   vertical-align: middle;
   text-align: center;
   text-decoration: none;
@@ -1219,8 +1237,8 @@ header  {
 }
 
 .catalog-navigation {
-  margin: 20px  0px;
-  padding: 0px;
+  margin: 20px  0;
+  padding: 0;
 }
 
 .catalog-navigation span{
@@ -1230,11 +1248,13 @@ header  {
 
 .catalog-navigation a {
   text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
   color: black;
 }
 
 .catalog-navigation li:first-child  {
-  font-size: 0px;
+  font-size: 0;
 }
 
 .catalog-h2 {
@@ -1253,6 +1273,11 @@ header  {
 .catalog-filter {
   width: 220px;
   float: left;
+}
+
+.filter-header  {
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 .range-container  {
@@ -1283,13 +1308,13 @@ header  {
 }
 
 .scale::after {
-  content: "_________________________";
+  content: "";
   position: absolute;
-  top: -18px;
+  top: 0px;
+  left: 0;
   width: 140px;
   height: 2px;
-  font-weight: bold;
-  color: #00ca74;
+  background-color: #00ca74;
 }
 
 .scale  div {
@@ -1361,7 +1386,7 @@ input[type="checkbox"]  {
 
 input[type="checkbox"]  + label {
   display: block;
-  margin: 15px  0px;
+  margin: 15px  0;
   line-height: 20px;
   padding-left: 45px;
   position: relative;
@@ -1396,7 +1421,7 @@ input[type="radio"]  {
 
 input[type="radio"]  + label {
   display: block;
-  margin: 15px  0px;
+  margin: 15px  0;
   line-height: 20px;
   padding-left: 45px;
   position: relative;
@@ -1460,6 +1485,12 @@ input[type="submit"]:hover  {
 .catalog-products {
   width: 700px;
   float: right;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.catalog-products span  {
+  text-transform: uppercase;
 }
 
 .catalog-sort {
@@ -1471,16 +1502,17 @@ input[type="submit"]:hover  {
 }
 
 .catalog-sort ul{
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
 }
 
 .catalog-sort li  {
   display: inline-block;
   list-style: none;
   line-height: 38px;
-  padding: 0px;
-  margin: 0px;
+  vertical-align: baseline;
+  padding: 0;
+  margin: 0;
 }
 
 .catalog-sort a {
@@ -1501,7 +1533,7 @@ input[type="submit"]:hover  {
 }
 
 a.catalog-sort-btn {
-  margin-right: 0px;
+  margin-right: 0;
   border-bottom: none;
 }
 
@@ -1512,7 +1544,7 @@ a.catalog-sort-btn:hover {
 .catalog-sort-btn {
   width: 40px;
   float: right;
-  font-size: 0px;
+  font-size: 0;
 }
 
 .catalog-sort-btn span  {
@@ -1524,7 +1556,7 @@ a.catalog-sort-btn:hover {
 }
 
 .catalog-products .product-card:nth-child(3n) {
-  margin-right: 0px;
+  margin-right: 0;
 }
 
 .product-card-bckgrnd:nth-child(3)::after,
@@ -1534,8 +1566,8 @@ a.catalog-sort-btn:hover {
   position: absolute;
   width: 60px;
   height: 59px;
-  top: 0px;
-  right: 0px;
+  top: 0;
+  right: 0;
 }
 
 .catalog-pages {
@@ -1544,13 +1576,14 @@ a.catalog-sort-btn:hover {
 }
 
 .catalog-pages  ul  {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
 .catalog-pages a  {
   display: inline-block;
+  vertical-align: top;
   min-width: 38px;
   height: 38px;
   margin-right: 10px;
@@ -1562,7 +1595,7 @@ a.catalog-sort-btn:hover {
   color: black;
 }
 
-.catalog-pages li:last-child  a{
+.next-page  {
   width: 140px;
 }
 
@@ -1590,6 +1623,11 @@ a.current-page  {
   font-family: "Cuprum";
   font-size: 30px;
   line-height: 24px;
+  text-transform: uppercase;
+}
+
+.about-drill p {
+  margin-top: 30px;
 }
 
 .catalog-navigation li {
@@ -1622,7 +1660,7 @@ a.current-page  {
   width: 620px;
   min-height: 163px;
   margin-left: -310px;
-  padding: 0px;
+  padding: 0;
 
   color: #000000;
 
@@ -1655,7 +1693,7 @@ a.current-page  {
   content: "";
   position: absolute;
   top: 10px;
-  right: 0px;
+  right: 0;
 
   width: 26px;
   height: 5px;
@@ -1695,6 +1733,7 @@ a.current-page  {
   top: 20px;
 
   display: inline-block;
+  vertical-align: baseline;
   width: 64px;
   height: 64px;
   margin-right: 30px;
@@ -1715,6 +1754,7 @@ a.current-page  {
 .write-us-btn input[type="submit"],
 .added-product-buttons  a {
   display: inline-block;
+  vertical-align: baseline;
   width: 220px;
   height: 38px;
 
@@ -1769,6 +1809,7 @@ a.current-page  {
 .user-name,
 .user-email {
   display: inline-block;
+  vertical-align: baseline;
   top: 50px;
   width: 220px;
   height: 90px;
@@ -1784,7 +1825,7 @@ a.current-page  {
   width: 206px;
   text-align: left;
   padding-left: 10px;
-  margin: 30px  0px;
+  margin: 30px  0;
   background-color: #ffffff;
   border: 2px solid #d7dcde;
   font-family: "PT Sans";

@@ -3,14 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт Каталог</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/styles_mini.css" rel="stylesheet">
   </head>
   <body>
     <header>
       <div class="header-top">
         <div class="container clearfix">
-          <a href="index.html"><img src="img/technomart_logo_header.png" alt="technomart-logo"></a>
-          <input type="search" name="search" placeholder="Поиск">
+          <a href="index.html"><img src="img/technomart_logo_header.png" alt="technomart-logo" width="220" height="42"></a>
+          <div class="search">
+            <input type="search" name="search" placeholder="Поиск">
+            <span class="search-ic"></span>
+          </div>
           <ul class="header-list">
             <li>
               <a href="#"> Закладки: 0 </a>
@@ -160,7 +164,7 @@
         </div>
         <div class=" clearfix">
           <article class="product-card product-card-bckgrnd">
-            <img src="img/bfg_3000.jpg" alt="bfg_3000">
+            <img src="img/bfg_3000.jpg" alt="bfg_3000" width="220" height="165">
             <div class="product-card-btn">
               <a class="buy" href="#product-card-btn"> Купить </a>
               <a class="to-favorite" href="#product-card-btn"> В закладки </a>
@@ -173,7 +177,7 @@
             </div>
           </article>
           <article class="product-card product-card-bckgrnd">
-            <img src="img/bfg_6000.jpg" alt="bfg_6000">
+            <img src="img/bfg_6000.jpg" alt="bfg_6000" width="220" height="165">
             <div class="product-card-btn">
               <a class="buy" href="#product-card-btn"> Купить </a>
               <a class="to-favorite" href="#product-card-btn"> В закладки </a>
@@ -186,7 +190,7 @@
             </div>
           </article>
           <article class="product-card product-card-bckgrnd">
-            <img src="img/bfg_6000.jpg" alt="bfg_6000">
+            <img src="img/bfg_6000.jpg" alt="bfg_6000" width="220" height="165">
             <div class="product-card-btn">
               <a class="buy" href="#product-card-btn"> Купить </a>
               <a class="to-favorite" href="#product-card-btn"> В закладки </a>
@@ -198,7 +202,7 @@
             </div>
           </article>
           <article class="product-card product-card-bckgrnd">
-            <img src="img/bfg_3000.jpg" alt="bfg_3000">
+            <img src="img/bfg_3000.jpg" alt="bfg_3000" width="220" height="165">
             <div class="product-card-btn">
               <a class="buy" href="#product-card-btn"> Купить </a>
               <a class="to-favorite" href="#product-card-btn"> В закладки </a>
@@ -211,7 +215,7 @@
             </div>
           </article>
           <article class="product-card product-card-bckgrnd">
-            <img src="img/bfg_6000.jpg" alt="bfg_6000">
+            <img src="img/bfg_6000.jpg" alt="bfg_6000" width="220" height="165">
             <div class="product-card-btn">
               <a class="buy" href="#product-card-btn"> Купить </a>
               <a class="to-favorite" href="#product-card-btn"> В закладки </a>
@@ -224,7 +228,7 @@
             </div>
           </article>
           <article class="product-card product-card-bckgrnd">
-            <img src="img/bfg_2000.jpg" alt="bfg_2000">
+            <img src="img/bfg_2000.jpg" alt="bfg_2000" width="220" height="165">
             <div class="product-card-btn">
               <a class="buy" href="#product-card-btn"> Купить </a>
               <a class="to-favorite" href="#product-card-btn"> В закладки </a>
@@ -236,7 +240,7 @@
             </div>
           </article>
           <article class="product-card product-card-bckgrnd">
-            <img src="img/bfg_3000.jpg" alt="bfg_3000">
+            <img src="img/bfg_3000.jpg" alt="bfg_3000" width="220" height="165">
             <div class="product-card-btn">
               <a class="buy" href="#product-card-btn"> Купить </a>
               <a class="to-favorite" href="#product-card-btn"> В закладки </a>
@@ -249,7 +253,7 @@
             </div>
           </article>
           <article class="product-card product-card-bckgrnd">
-            <img src="img/bfg_6000.jpg" alt="bfg_6000">
+            <img src="img/bfg_6000.jpg" alt="bfg_6000" width="220" height="165">
             <div class="product-card-btn">
               <a class="buy" href="#product-card-btn"> Купить </a>
               <a class="to-favorite" href="#product-card-btn"> В закладки </a>
@@ -262,7 +266,7 @@
             </div>
           </article>
           <article class="product-card product-card-bckgrnd">
-            <img src="img/bfg_2000.jpg" alt="bfg_2000">
+            <img src="img/bfg_2000.jpg" alt="bfg_2000" width="220" height="165">
             <div class="product-card-btn">
               <a class="buy" href="#product-card-btn"> Купить </a>
               <a class="to-favorite" href="#product-card-btn"> В закладки </a>
@@ -286,7 +290,7 @@
                 <a class="" href="#page_3"> 3 </a>
               </li>
               <li>
-                <a class="" href="#page_next"> Следующая </a>
+                <a class="next-page" href="#page_next"> Следующая </a>
               </li>
             </ul>
           </div>
@@ -385,12 +389,12 @@
       </div>
       <div class="background-btns">
         <div class="added-product-buttons modal-content-container">
-          <a class="сheckout-btn" href="#сheckout"> Оформить заказ </a>
-          <a class="сontinue-btn" href="#сontinue"> Продолжить покупки </a>
+          <a class="сheckout-btn" href="form.html"> Оформить заказ </a>
+          <a class="сontinue-btn" href="inner.html"> Продолжить покупки </a>
         </div>
       </div>
     </div>
     <script src="js/jquery-3.1.0.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/javascript_mini.js"></script>
   </body>
 </html>

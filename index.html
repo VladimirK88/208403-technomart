@@ -4,14 +4,17 @@
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/styles_mini.css" rel="stylesheet">
   </head>
   <body>
     <header>
       <div class="header-top">
         <div class="container clearfix">
-          <a href="index.html"><img src="img/technomart_logo_header.png" alt="technomart-logo"></a>
-          <input type="search" name="search" placeholder="Поиск">
+          <a href="index.html"><img src="img/technomart_logo_header.png" alt="technomart-logo" width="220" height="42"></a>
+          <div class="search">
+            <input type="search" name="search" placeholder="Поиск">
+            <span class="search-ic"></span>
+          </div>
           <ul class="header-list">
             <li>
               <a href="#"> Закладки: 0 </a>
@@ -96,7 +99,7 @@
                   <span>Перфораторы</span>
                   <span>Настоящие мужские игрушки</span>
                 </div>
-                <a class="slider-btn" href="inner.html"> Открыть каталог </a>
+                <a class="main-btn" href="inner.html"> Открыть каталог </a>
               </div>
             </div>
             <div class="slide">
@@ -105,7 +108,7 @@
                   <span>Дрели</span>
                   <span>Соседям на радость!</span>
                 </div>
-                <a class="slider-btn" href="inner.html"> Открыть каталог </a>
+                <a class="main-btn" href="inner.html"> Открыть каталог </a>
               </div>
             </div>
           </div>
@@ -121,11 +124,11 @@
       </div>
       <div class="main-heading container clearfix">
         <h2> Популярные товары: </h2>
-        <a href="#"> Все популярные товары </a>
+        <a class="main-btn" href="#product"> Все популярные товары </a>
       </div>
       <div class="main-products container clearfix">
         <article class="product-card main-product-card-bckgrnd">
-          <img src="img/bfg_9000.jpg" alt="bfg_9000">
+          <img src="img/bfg_9000.jpg" alt="bfg_9000" width="220" height="165">
           <div class="product-card-btn">
             <a class="buy" href="#product-card-btn"> Купить </a>
             <a class="to-favorite" href="#product-card-btn"> В закладки </a>
@@ -136,7 +139,7 @@
           <a class="price" href="#"> 25500 Р. </a>
         </article>
         <article class="product-card main-product-card-bckgrnd">
-          <img src="img/bfg_3000.jpg" alt="bfg_3000">
+          <img src="img/bfg_3000.jpg" alt="bfg_3000" width="220" height="165">
           <div class="product-card-btn">
             <a class="buy" href="#product-card-btn"> Купить </a>
             <a class="to-favorite" href="#product-card-btn"> В закладки </a>
@@ -147,7 +150,7 @@
           <a class="price" href="#"> 15500 Р. </a>
         </article>
         <article class="product-card main-product-card-bckgrnd">
-          <img src="img/bfg_6000.jpg" alt="bfg_6000">
+          <img src="img/bfg_6000.jpg" alt="bfg_6000" width="220" height="165">
           <div class="product-card-btn">
             <a class="buy" href="#product-card-btn"> Купить </a>
             <a class="to-favorite" href="#product-card-btn"> В закладки </a>
@@ -158,7 +161,7 @@
           <a class="price" href="#"> 25500 Р. </a>
         </article>
         <article class="product-card main-product-card-bckgrnd">
-          <img src="img/bfg_2000.jpg" alt="bfg_2000">
+          <img src="img/bfg_2000.jpg" alt="bfg_2000" width="220" height="165">
           <div class="product-card-btn">
             <a class="buy" href="#product-card-btn"> Купить </a>
             <a class="to-favorite" href="#product-card-btn"> В закладки </a>
@@ -170,48 +173,48 @@
       </div>
       <div class="main-heading container clearfix">
         <h2> Популярные производители: </h2>
-        <a href="#"> Все производители </a>
+        <a class="main-btn" href="#producers"> Все производители </a>
       </div>
         <div class="main-producers container clearfix">
           <ul>
             <li>
               <a href="#producer">
-                <img src="img/bosch.png" alt="bosch">
+                <img src="img/bosch.png" alt="bosch" width="126" height="37">
               </a>
             </li>
             <li>
               <a href="#producer">
-                <img src="img/makita.png" alt="makita">
+                <img src="img/makita.png" alt="makita" width="123" height="40">
               </a>
             </li>
             <li>
               <a href="#producer">
-                <img src="img/dewalt.png" alt="dewalt">
+                <img src="img/dewalt.png" alt="dewalt" width="146" height="44">
               </a>
             </li>
             <li>
               <a href="#producer">
-                <img src="img/interskol.png" alt="интерскол">
+                <img src="img/interskol.png" alt="интерскол" width="184" height="32">
               </a>
             </li>
             <li>
               <a href="#producer">
-                <img src="img/hitachi.png" alt="hitachi">
+                <img src="img/hitachi.png" alt="hitachi" width="169" height="31">
               </a>
             </li>
             <li>
               <a href="#producer">
-                <img src="img/LG.png" alt="LG">
+                <img src="img/lg.png" alt="LG" width="121" height="73">
               </a>
             </li>
             <li>
               <a href="#producer">
-                <img src="img/AEG.png" alt="AEG">
+                <img src="img/aeg.png" alt="AEG" width="151" height="96">
               </a>
             </li>
             <li>
               <a href="#producer">
-                <img src="img/metabo.png" alt="metabo">
+                <img src="img/metabo.png" alt="metabo" width="204" height="69">
               </a>
             </li>
           </ul>
@@ -223,44 +226,48 @@
             Хороший интернет-магазин отличается от плохого не только ценами!
             Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
           </p>
-          <div class="main-services-type">
+          <div class="main-services-type clearfix">
             <ul class="main-services-menu">
               <li>
-                <a href="#delivery"> Доставка </a>
+                <a  class="dlvry-btn" href="#delivery"> Доставка </a>
               </li>
               <li>
-                <a href="#guarante" > Гарантия </a>
+                <a class="grnte-btn" href="#guarante" > Гарантия </a>
               </li>
               <li>
-                <a href="#credit"> Кредит </a>
+                <a class="crdt-btn" href="#credit"> Кредит </a>
               </li>
             </ul>
           </div>
+          <div class="service">
+            <div class="dlvry service-show">
+              <span class="dlvry-h"> Доставка </span>
+              <p>
+                Мы с удовольствием доставим ваш товар прямо
+                к вашему подъезду совершенно бесплатно!
+                Ведь мы неплохо заработаем,
+                поднимая его на ваш на этаж!
+              </p>
+            </div>
+            <div class="grnte">
+              <span> Гарантия </span>
+              <p>
+                Если купленный у нас товар поломается или заискрит,
+                а также в случае пожара, спровоцированного его возгаранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.
+                Дом уж восстановите как-нибудь сами.
+              </p>
+              </div>
+            <div class="crdt">
+              <span> Кредит </span>
+              <p>
+                Залезть в долговую яму стало проще!
+                Кредитные консультанты придут вам на помощь.
+              </p>
+              <a class="main-btn" href="#"> Отправить заявку </a>
+            </div>
+          </div>
         </div>
       </div>
-<!--
-      <span class="main-services-description-heading"> Доставка </span>
-      <p>
-      Мы с удовольствием доставим ваш товар прямо
-      к вашему подъезду совершенно бесплатно!
-      Ведь мы неплохо заработаем,
-      поднимая его на ваш на этаж!
-      </p>
-
-      <span class="main-services-description-heading"> Гарантия </span>
-      <p>
-      Если купленный у нас товар поломается или заискрит,
-      а также в случае пожара, спровоцированного его возгаранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.
-      Дом уж восстановите как-нибудь сами.
-      </p>
-
-      span class="main-services-description-heading"> Кредит </span>
-      <p>
-      Залезть в долговую яму стало проще!
-      Кредитные консультанты придут вам на помощь.
-      </p>
-      <a class="main-btn" href="#"> Отправить заявку </a>
--->
       <div class="main-company container clearfix">
         <div class="main-company-description">
           <h3> Компания "Техномарт" </h3>
@@ -291,7 +298,7 @@
             <br>
             заехав в наш офис:
           </p>
-          <img  class="map-open" src="img/map.jpg" alt="contacts-map">
+          <img  class="map-open" src="img/map.jpg" alt="contacts-map" width="300" height="158">
           <a class="main-btn  write-us-open-window" href="#write"> Заблудились? Напишите нам! </a>
         </div>
       </div>
@@ -300,7 +307,7 @@
       <div class="footer-navigation">
         <div class="container clearfix">
           <div class="footer-logo">
-            <a href="index.html"><img src="img/technomart_logo_footer.png" alt="technomart-logo"></a>
+            <a href="index.html"><img src="img/technomart_logo_footer.png" alt="technomart-logo" width="220" height="68"></a>
           </div>
           <div class="footer-navigation-menu">
             <ul class="footer-navigation-menu-top">
@@ -379,8 +386,8 @@
       </div>
       <div class="background-btns">
         <div class="added-product-buttons modal-content-container">
-          <a class="сheckout-btn" href="#сheckout"> Оформить заказ </a>
-          <a class="сontinue-btn" href="#сontinue"> Продолжить покупки </a>
+          <a class="сheckout-btn" href="form.html"> Оформить заказ </a>
+          <a class="сontinue-btn" href="index.html"> Продолжить покупки </a>
         </div>
       </div>
     </div>
@@ -411,9 +418,8 @@
     <div class="modal-content-map">
       <button class="modal-content-close" type="button" title="Закрыть"> Закрыть </button>
       <div class="map"></div>
-      </form>
     </div>
     <script src="js/jquery-3.1.0.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/javascript_mini.js"></script>
   </body>
 </html>
