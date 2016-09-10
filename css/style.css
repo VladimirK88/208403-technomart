@@ -125,7 +125,7 @@ h3  {
 h4  {
   font-size: 17px;
   color: black;
-  line-height: 30px;
+  line-height: 19px;
   font-weight: normal;
   text-transform: uppercase;
   font-family: "PT Sans Bold", sans-serif;
@@ -150,7 +150,7 @@ header  {
 
 .header-top {
   height: 42px;
-  margin-bottom: 46px;
+  margin-bottom: 32px;
   background-color: #293449;
   font-family: "Cuprum", sans-serif;
   font-size: 17px;
@@ -240,19 +240,20 @@ input[type="search"]:focus + .search-ic {
   margin-left: -5px;
 }
 
-.header-list a.not-empty {
+.not-empty {
   background-color: #ee3643;
 }
 
-.header-list a.not-empty:hover {
+.bucket:hover  + .not-empty:hover {
   background-color: #ca2c37;
 }
 
-.header-list a.not-empty:active {
+.not-empty:active {
   opacity: 0.7;
 }
 
-.header-list a:hover {
+.favorites:hover,
+.bucket:hover {
   background-color: #212a3a;
 }
 
@@ -260,34 +261,34 @@ input[type="search"]:focus + .search-ic {
   opacity: 0.7;
 }
 
-.header-list li:nth-child(1) a::before  {
+.favorites::before  {
   font-family: "symbols-technomart", sans-serif;
   content: "🔖";
   opacity: 0.3;
   margin: 10px;
 }
 
-.header-list li:nth-child(1) a:hover::before  {
+.favorites:hover::before  {
   opacity: 1;
 }
 
-.header-list li:nth-child(2) a::before  {
+.bucket::before  {
   font-family: "symbols-technomart", sans-serif;
   content: "\62";
   opacity: 0.3;
   margin: 10px;
 }
 
-.header-list li:nth-child(2) a:hover::before  {
+.bucket:hover::before  {
   opacity: 1;
 }
 
-.header-list li:last-child a {
+.top-checkout {
   background-color: #63a63e;
   padding: 0 20px;
 }
 
-.header-list li:last-child a:hover {
+ .top-checkout:active {
   background-color: #5fbb2d;
 }
 
@@ -295,7 +296,7 @@ input[type="search"]:focus + .search-ic {
   float: left;
   width: 210px;
   margin-left: 50px;
-  margin-right: 70px;
+  margin-right: 78px;
   margin-bottom: 20px;
 }
 
@@ -309,7 +310,8 @@ input[type="search"]:focus + .search-ic {
 .header-contacts {
   float: left;
   width: 271px;
-  margin-top: 12px;
+  margin-top: 14px;
+  margin-left: -18px;
 }
 
 .header-contacts a {
@@ -340,7 +342,7 @@ input[type="search"]:focus + .search-ic {
 
 .header-sign-up {
   float: right;
-  margin-top: 12px;
+  margin-top: 17px;
 }
 
 .header-sign-up a {
@@ -364,17 +366,17 @@ input[type="search"]:focus + .search-ic {
   color: #b2b2b2;
 }
 
-.header-sign-up a:first-child::before {
+.login-in:first-child::before {
   font-family: "symbols-technomart", sans-serif;
   content: "\2386";
   color: #c5c5c5;
 }
 
-.header-sign-up a:first-child:hover::before {
+.login-in:first-child:hover::before {
   color: #32425c;
 }
 
-.header-sign-up a:first-child:active::before {
+.login-in:first-child:active::before {
   color: #b2b2b2;
 }
 
@@ -394,6 +396,7 @@ input[type="search"]:focus + .search-ic {
   color: black;
   background-color: #ffffff;
   margin-right: -3px;
+  margin-top: 14px;
 }
 
 .header-signed-up span  {
@@ -403,12 +406,12 @@ input[type="search"]:focus + .search-ic {
   padding: 0  10px;
 }
 
-.header-signed-up > a:hover span  {
+.user:hover span  {
   color: #32425c;
 }
 
-.header-signed-up > a:active,
-.header-signed-up > a:active span  {
+.user:active,
+.user:active span  {
   color: #c5c5c5;
 }
 
@@ -427,7 +430,7 @@ input[type="search"]:focus + .search-ic {
   margin: 5px 10px;
 }
 
-.header-signed-up li:first-child::after {
+.my-favorites::after {
   content: ".";
   position: absolute;
   top: -12px;
@@ -451,7 +454,8 @@ input[type="search"]:focus + .search-ic {
 .header-navigation {
   float: left;
   width: 940px;
-  margin-bottom: 60px;
+  margin-top: 5px;
+  margin-bottom: 65px;
 }
 
 .header-navigation-menu {
@@ -514,7 +518,7 @@ input[type="search"]:focus + .search-ic {
 
 .main-promo-block {
   margin-top: 59px;
-  margin-bottom: 53px;
+  margin-bottom: 41px;
 }
 
 .main-promo-card {
@@ -724,9 +728,9 @@ input[type="search"]:focus + .search-ic {
 
 .main-heading a {
   float: right;
-  margin-right: 24px;
+  margin-right: 17px;
   margin-top: 20px;
-  width: 160px;
+  width: 153px;
 }
 
 .product-card {
@@ -772,7 +776,7 @@ input[type="search"]:focus + .search-ic {
   display: none;
 }
 
-.product-card  a.buy {
+.buy {
   display: block;
   width: 135px;
   height: 38px;
@@ -780,28 +784,29 @@ input[type="search"]:focus + .search-ic {
   background-color: #63a63e;
   box-shadow: inset 0 -3px  0 0 #367315;
   text-transform: uppercase;
+  color: #ffffff;
 }
 
-.product-card  a.buy::before {
+.buy::before {
   font-family: "symbols-technomart", sans-serif;
   text-transform: none;
   content: "\62";
   opacity: 0.3;
 }
 
-.product-card  a.buy:hover {
+.buy:hover {
   background-color: #5fbb2d;
 }
 
-.product-card  a.buy:active {
+.buy:active {
   background-color: #518534;
 }
 
-.product-card  a.buy:hover::before {
+.buy:hover::before {
   opacity: 1;
 }
 
-.product-card a.to-favorite {
+.to-favorite {
   display: block;
   width: 135px;
   height: 38px;
@@ -812,12 +817,12 @@ input[type="search"]:focus + .search-ic {
   color: #32425c;
 }
 
-.product-card  a.to-favorite:hover {
+.to-favorite:hover {
   box-shadow: inset 0 0 0 3px #32425c;
   background-color: #ffffff;
 }
 
-.product-card  a.to-favorite:active {
+.to-favorite:active {
   opacity: 0.3;
 }
 
@@ -840,16 +845,20 @@ input[type="search"]:focus + .search-ic {
   position: relative;
   width: 123px;
   height: 40px;
-  background-color: #ee3643;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   text-decoration: none;
   text-align: center;
-  color: #ffffff;
   line-height: 40px;
   border-radius: 2px;
 }
 
-.product-card a.price:after {
+.price  {
+  color: #ffffff;
+  background-color: #ee3643;
+}
+
+.price:after {
   position: absolute;
   top: 0;
   right: -20px;
@@ -860,11 +869,11 @@ input[type="search"]:focus + .search-ic {
   border-left-color: #ee3643;
 }
 
-.product-card a.price:hover {
+.price:hover {
   background-color: #ca2c37;
 }
 
-.main-product-card a.price:active {
+.price:active {
   background-color: #ba2732;
 }
 
@@ -877,7 +886,8 @@ input[type="search"]:focus + .search-ic {
 }
 
 .main-producers {
-  margin-bottom: 87px;
+  margin-bottom: 52px;
+  margin-top: 27px;
 }
 
 .main-producers ul {
@@ -925,7 +935,7 @@ input[type="search"]:focus + .search-ic {
 
 .main-services {
   position: relative;
-  margin-bottom: 80px;
+  margin-bottom: 47px;
   padding-top: 62px;
   padding-bottom: 100px;
   background-color: #f2f6f8;
@@ -937,7 +947,7 @@ input[type="search"]:focus + .search-ic {
 
 .main-services-type {
   float: left;
-  margin-top: 70px;
+  margin-top: 56px;
 }
 
 .main-services-type ul {
@@ -949,6 +959,7 @@ input[type="search"]:focus + .search-ic {
 
 .main-services-type li {
   list-style: none;
+  margin-left: 2px;
 }
 
 .main-services-menu a {
@@ -979,8 +990,8 @@ input[type="search"]:focus + .search-ic {
 
 .service  {
   float: right;
-  margin-top: 70px;
-  width: 620px;
+  margin-top: 60px;
+  width: 618px;
   position: relative;
 }
 
@@ -1053,12 +1064,19 @@ input[type="search"]:focus + .search-ic {
 }
 
 .main-company {
-  margin-bottom: 80px;
+  margin-bottom: 113px;
 }
 
 .main-company-description {
   width: 540px;
   float: left;
+}
+
+.main-company-description  a {
+  width: 140px;
+  position: relative;
+  top: 27px;
+  padding: 0 40px;
 }
 
 .main-company-description li{
@@ -1073,13 +1091,14 @@ input[type="search"]:focus + .search-ic {
 }
 
 .main-company-contacts  img {
+  margin-top: 17px;
   cursor: pointer;
 }
 
 .main-company-contacts  a {
   width: 200px;
   position: relative;
-  top: 25px;
+  top: 30px;
 }
 
 .footer-navigation {
@@ -1260,8 +1279,8 @@ input[type="search"]:focus + .search-ic {
 .catalog-h2 {
   display: block;
   margin-bottom: 20px;
-  padding-left: 32px;
-  padding-top: 32px;
+  padding-left: 28px;
+  padding-top: 14px;
   padding-bottom: 24px;
   background-color: #f2f6f8;
 }
@@ -1284,7 +1303,7 @@ input[type="search"]:focus + .search-ic {
   position: relative;
   width: 220px;
   height: 127px;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 }
 
 .range  {
@@ -1422,7 +1441,7 @@ input[type="radio"]  {
 input[type="radio"]  + label {
   display: block;
   margin: 15px  0;
-  line-height: 20px;
+  line-height: 24px;
   padding-left: 45px;
   position: relative;
   cursor: pointer;
@@ -1572,7 +1591,7 @@ a.catalog-sort-btn:hover {
 
 .catalog-pages {
   float: left;
-  margin-top: 32px;
+  margin-top: 30px;
 }
 
 .catalog-pages  ul  {
@@ -1614,8 +1633,8 @@ a.current-page  {
 }
 
 .about-drill {
-  padding-top: 64px;
-  padding-bottom: 70px;
+  padding-top: 67px;
+  padding-bottom: 50px;
   background-color: #f2f6f8;
 }
 
